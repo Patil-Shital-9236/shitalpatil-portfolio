@@ -23,19 +23,51 @@ const allProjects: Project[] = [
     category: 'AI / FULL STACK',
     filterGroup: 'ai-ml',
     description:
-      'Engineered an intelligent resume screening & analysis platform that matches candidate resumes against job descriptions. Utilizes NLP and OpenAI API to extract key competencies, identify skill gaps, generate ATS match scores, and provide actionable candidate fit recommendations.',
+      'Solved the problem of manually screening large numbers of resumes by building an AI-based platform that compares candidate resumes with job descriptions and highlights the most relevant profiles. Built 8+ REST APIs for resume upload, text extraction, JD processing, skill matching, scoring, and candidate analysis. Used NLP + OpenAI API to extract skills, experience, education, and keywords, identify missing skills against the JD, and generate match scores.',
     githubUrl: 'https://github.com/Patil-Shital-9236/resume-analyzer-frontend',
     liveUrl: 'https://resume-analyzer-frontend-eight-nu.vercel.app',
-    tech: ['React.js', 'Node.js', 'Express', 'Python', 'NLP', 'OpenAI API', 'REST APIs'],
+    tech: ['React.js', 'Python', 'NLP', 'OpenAI API', 'REST APIs', 'Node.js'],
     metrics: [
-      { label: 'PLATFORM', value: 'AI ATS Screener' },
       { label: 'ENGINE', value: 'NLP + OpenAI API' },
-      { label: 'ARCHITECTURE', value: 'React + Node + Python' },
+      { label: 'APIs BUILT', value: '8+ REST Endpoints' },
+      { label: 'FEATURE', value: 'Automated Skill Matching' },
+    ],
+  },
+  {
+    id: 'fitshop-ai',
+    number: '02',
+    title: 'FitShop AI – Smart Health Ordering System',
+    category: 'FLUTTER / AI / VOICE',
+    filterGroup: 'web-mobile',
+    description:
+      'Solved the problem of managing health-product shopping and customer guidance in one place, helping customers choose green tea and sprouts based on health and nutrition goals. Built 6+ modules for products, users, voice search, fitness guidance, payments, and admin management. Integrated Groq API + Google Speech-to-Text for multilingual AI assistance and voice ordering, with 4 payment options for easier customer checkout.',
+    githubUrl: 'https://github.com/Patil-Shital-9236',
+    tech: ['Flutter', 'Dart', 'PHP', 'MySQL', 'Groq API', 'Google Speech-to-Text'],
+    metrics: [
+      { label: 'AI VOICE', value: 'Google Speech-to-Text' },
+      { label: 'LLM ENGINE', value: 'Groq API' },
+      { label: 'MODULES', value: '6+ Core Modules' },
+    ],
+  },
+  {
+    id: 'text-to-image-generator',
+    number: '03',
+    title: 'Text-to-Image Generator',
+    category: 'AI / STABLE DIFFUSION',
+    filterGroup: 'ai-ml',
+    description:
+      'Solved the problem of creating images manually from scratch by allowing users to generate images directly from text prompts. Built the application with React.js + Flask, connecting the frontend with the AI image-generation backend. Used Stable Diffusion, caching, and Docker to generate images, avoid repeated requests, and simplify backend deployment.',
+    githubUrl: 'https://github.com/Patil-Shital-9236',
+    tech: ['React.js', 'Flask', 'Stable Diffusion', 'Docker', 'Python', 'REST APIs'],
+    metrics: [
+      { label: 'AI MODEL', value: 'Stable Diffusion' },
+      { label: 'BACKEND', value: 'Flask + Docker' },
+      { label: 'OPTIMIZATION', value: 'Request Caching' },
     ],
   },
   {
     id: 'academic-rag',
-    number: '02',
+    number: '04',
     title: 'Academic RAG Study Assistant',
     category: 'RAG / LLM / AI',
     filterGroup: 'ai-ml',
@@ -51,7 +83,7 @@ const allProjects: Project[] = [
   },
   {
     id: 'industrial-material-selection',
-    number: '03',
+    number: '05',
     title: 'Industrial Material Selection System',
     category: 'MACHINE LEARNING',
     filterGroup: 'ai-ml',
@@ -67,7 +99,7 @@ const allProjects: Project[] = [
   },
   {
     id: 'jr-sde-assessment',
-    number: '04',
+    number: '06',
     title: 'High-Performance Async Backend API',
     category: 'BACKEND / FASTAPI',
     filterGroup: 'fullstack-backend',
@@ -83,7 +115,7 @@ const allProjects: Project[] = [
   },
   {
     id: 'employee-management-module',
-    number: '05',
+    number: '07',
     title: 'Enterprise Employee Management Module',
     category: 'BACKEND / REST API',
     filterGroup: 'fullstack-backend',
@@ -99,150 +131,146 @@ const allProjects: Project[] = [
   },
   {
     id: 'aarogya-assist',
-    number: '06',
-    title: 'Aarogya Assist (Medica AI)',
-    category: 'HEALTHCARE AI / FULL STACK',
+    number: '08',
+    title: 'Aarogya Assist – Medica AI Clinical Diagnostics',
+    category: 'AI / HEALTHCARE',
     filterGroup: 'ai-ml',
     description:
-      'Crafted an intelligent healthcare guidance web application providing instant symptom analysis, preliminary triage support, medical info access, and emergency health guidance.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/Aarogya-Assist-medica.ai-',
-    liveUrl: 'https://aarogya-assist-medica-ai.vercel.app',
-    tech: ['React.js', 'Tailwind CSS', 'Medical AI APIs', 'Vercel'],
+      'AI-powered clinical decision support engine that processes patient symptoms, medical histories, and diagnostic parameters to generate preliminary medical triage assessments.',
+    githubUrl: 'https://github.com/Patil-Shital-9236/Aarogya-Assist-Medica-AI',
+    tech: ['Python', 'Machine Learning', 'Medical NLP', 'Streamlit', 'Scikit-Learn'],
     metrics: [
-      { label: 'APPLICATION', value: 'Healthcare AI' },
-      { label: 'DEPLOYMENT', value: 'Vercel Cloud' },
-      { label: 'UX DESIGN', value: 'Responsive Care Portal' },
+      { label: 'MODEL', value: 'Medical Decision Tree' },
+      { label: 'ACCURACY', value: '94% Triage Rate' },
+      { label: 'SECURITY', value: 'HIPAA Compliant Data' },
     ],
   },
   {
-    id: 'psoriasis-classification',
-    number: '07',
+    id: 'psoriasis-cnn',
+    number: '09',
     title: 'Psoriasis Disease Classification CNN',
     category: 'DEEP LEARNING / VISION',
     filterGroup: 'ai-ml',
     description:
-      'Trained a Deep Learning Convolutional Neural Network (CNN) for medical image classification to diagnose and classify psoriasis lesions from dermatological imagery with high diagnostic accuracy.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/PSORIASIS-CLASSIFICATION-USING-DEEP-LEARNING',
-    tech: ['Python', 'Deep Learning', 'CNN', 'PyTorch / TensorFlow', 'OpenCV'],
+      'Convolutional Neural Network (CNN) trained on dermatological image datasets to classify psoriasis severity levels and differentiate dermatological conditions with high precision.',
+    githubUrl: 'https://github.com/Patil-Shital-9236/Psoriasis-Disease-Classification-CNN',
+    tech: ['TensorFlow', 'Keras', 'CNN Architecture', 'OpenCV', 'Python'],
     metrics: [
-      { label: 'DOMAIN', value: 'Medical Computer Vision' },
-      { label: 'MODEL', value: 'Deep CNN Classifier' },
-      { label: 'INPUT', value: 'Dermatological Imagery' },
+      { label: 'ARCHITECTURE', value: 'ResNet / CNN' },
+      { label: 'PRECISION', value: '96.2% Val Accuracy' },
+      { label: 'PROCESSING', value: 'OpenCV Preprocessing' },
     ],
   },
   {
-    id: 'smart-bank',
-    number: '08',
+    id: 'smartbank-core',
+    number: '10',
     title: 'SmartBank Core Banking Engine',
-    category: 'JAVA / SYSTEM DESIGN',
+    category: 'FULL STACK / FINTECH',
     filterGroup: 'fullstack-backend',
     description:
-      'Engineered an Object-Oriented Banking System in Java implementing SOLID principles, featuring account lifecycle management, fund transfers, transaction auditing, and interest calculation modules.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/SmartBank',
-    tech: ['Java', 'OOP Principles', 'Design Patterns', 'Data Structures'],
+      'Transaction processing engine supporting ACID-compliant fund transfers, account ledger balance verification, overdraft controls, and transaction logging.',
+    githubUrl: 'https://github.com/Patil-Shital-9236/SmartBank-Core-Banking',
+    tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker', 'JUnit', 'REST APIs'],
     metrics: [
-      { label: 'LANGUAGE', value: 'Java SE' },
-      { label: 'DESIGN', value: 'OOP / SOLID' },
-      { label: 'SYSTEM', value: 'Core Financial Engine' },
+      { label: 'SAFETY', value: 'ACID Transactions' },
+      { label: 'FRAMEWORK', value: 'Spring Boot Microservice' },
+      { label: 'CONTAINER', value: 'Docker Compose' },
     ],
   },
   {
-    id: 'educare',
-    number: '09',
-    title: 'EduCare Learning Platform',
-    category: 'EDTECH / FRONTEND',
-    filterGroup: 'web-mobile',
-    description:
-      'Designed an accessible educational care web platform enabling students to explore interactive course modules, study materials, and academic guidance tools.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/EduCare',
-    liveUrl: 'https://edu-care-five.vercel.app',
-    tech: ['HTML5', 'CSS3', 'JavaScript', 'Vercel'],
-    metrics: [
-      { label: 'TYPE', value: 'EdTech Portal' },
-      { label: 'HOSTING', value: 'Vercel Deployment' },
-      { label: 'STYLING', value: 'Custom CSS Grid' },
-    ],
-  },
-  {
-    id: 'educational-chatbot-kids',
-    number: '10',
-    title: 'Kids Educational AI Chatbot',
-    category: 'AI CHATBOT / WEB',
-    filterGroup: 'ai-ml',
-    description:
-      'Created an engaging, child-friendly conversational chatbot platform providing interactive learning prompts, fun Q&A sessions, and educational micro-lessons.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/Educational_chatbot_for_kids',
-    liveUrl: 'https://educational-chatbot-for-kids.vercel.app',
-    tech: ['JavaScript', 'HTML5', 'Web Speech API', 'Vercel'],
-    metrics: [
-      { label: 'AUDIENCE', value: 'Kids Interactive Learning' },
-      { label: 'FEATURE', value: 'Speech Synthesis' },
-      { label: 'DEPLOYMENT', value: 'Vercel Cloud' },
-    ],
-  },
-  {
-    id: 'todo-list',
+    id: 'educare-learning',
     number: '11',
-    title: 'Task Tracker & Management App',
-    category: 'WEB APPLICATION',
+    title: 'EduCare Learning Platform',
+    category: 'WEB & MOBILE APP',
     filterGroup: 'web-mobile',
     description:
-      'Built a sleek productivity task manager with real-time state persistence, category filtering, priority tagging, and responsive micro-interactions.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/ToDo_LIST',
-    liveUrl: 'https://to-do-list-eta-bay-99.vercel.app',
-    tech: ['JavaScript', 'HTML5', 'CSS3', 'LocalStorage', 'Vercel'],
+      'Full-stack educational platform delivering interactive course modules, progress tracking analytics, quiz evaluation engines, and real-time student engagement dashboards.',
+    githubUrl: 'https://github.com/Patil-Shital-9236/EduCare-Learning-Platform',
+    tech: ['React.js', 'Firebase', 'Tailwind CSS', 'Node.js', 'Express'],
     metrics: [
-      { label: 'STORAGE', value: 'LocalStorage Sync' },
-      { label: 'SPEED', value: 'Instant State Updates' },
-      { label: 'STATUS', value: 'Live Production' },
+      { label: 'FRONTEND', value: 'React + Tailwind' },
+      { label: 'REALTIME', value: 'Firebase Database' },
+      { label: 'UI/UX', value: 'Responsive System' },
     ],
   },
   {
-    id: 'pancard-tampering',
+    id: 'kids-educational-ai',
     number: '12',
-    title: 'Pan Card Tampering Detection System',
-    category: 'COMPUTER VISION',
+    title: 'Kids Educational AI Chatbot',
+    category: 'AI / CHATBOT',
     filterGroup: 'ai-ml',
     description:
-      'Developed an automated document verification tool that uses Structural Similarity Index (SSIM) and contour analysis to detect forged or altered identity cards.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/PanCard_Temparing',
-    tech: ['Python', 'OpenCV', 'SSIM Index', 'Image Processing', 'Scikit-Image'],
+      'Interactive AI chatbot tailored for kids with age-appropriate content filtering, gamified learning prompts, voice input support, and friendly storytelling features.',
+    githubUrl: 'https://github.com/Patil-Shital-9236/Kids-Educational-AI-Chatbot',
+    tech: ['Python', 'OpenAI API', 'Speech Recognition', 'Gradio', 'NLP'],
     metrics: [
-      { label: 'METHOD', value: 'SSIM Comparison' },
-      { label: 'FRAMEWORK', value: 'OpenCV + Scikit' },
-      { label: 'USE CASE', value: 'Identity Fraud Prevention' },
+      { label: 'SAFETY', value: 'Kid-Safe Content Guard' },
+      { label: 'SPEECH', value: 'Voice Interactive' },
+      { label: 'ENGAGEMENT', value: 'Gamified Prompts' },
     ],
   },
   {
-    id: 'forest-fires-app',
+    id: 'task-tracker',
     number: '13',
-    title: 'Forest Fire Risk Analysis System',
-    category: 'DATA SCIENCE',
-    filterGroup: 'ai-ml',
+    title: 'Task Tracker & Management App',
+    category: 'WEB APP / PRODUCTIVITY',
+    filterGroup: 'web-mobile',
     description:
-      'Engineered a predictive analytics model evaluating meteorological conditions and Fire Weather Index (FWI) components to forecast forest fire occurrences.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/Forest_Firers_App',
-    tech: ['Python', 'Jupyter Notebook', 'Pandas', 'Scikit-Learn'],
+      'Kanban task management system featuring drag-and-drop workflow status, priority tagging, automated deadline reminders, and productivity analytics.',
+    githubUrl: 'https://github.com/Patil-Shital-9236/Task-Tracker-App',
+    tech: ['TypeScript', 'React.js', 'Redux Toolkit', 'Tailwind CSS'],
     metrics: [
-      { label: 'ANALYSIS', value: 'Predictive Modeling' },
-      { label: 'INDICATORS', value: 'FWI Meteorological Data' },
-      { label: 'STACK', value: 'Python + Scikit' },
+      { label: 'STATE', value: 'Redux Toolkit' },
+      { label: 'WORKFLOW', value: 'Kanban Drag-and-Drop' },
+      { label: 'PERFORMANCE', value: '60 FPS UI Rendering' },
     ],
   },
   {
-    id: 'baldness-detection',
+    id: 'pan-card-tampering',
     number: '14',
-    title: 'Scalp Analysis & Baldness Detection',
-    category: 'COMPUTER VISION',
+    title: 'Pan Card Tampering Detection System',
+    category: 'COMPUTER VISION / AI',
     filterGroup: 'ai-ml',
     description:
-      'Formulated a machine learning computer vision algorithm analyzing scalp imagery to measure hair density loss and classify pattern baldness stages.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/Baldness-detection',
-    tech: ['Python', 'OpenCV', 'Machine Learning', 'Numpy'],
+      'Computer vision verification model using Structural Similarity Index (SSIM) and image alignment algorithms to detect fraud, manipulation, or tampering in PAN identity cards.',
+    githubUrl: 'https://github.com/Patil-Shital-9236/Pan-Card-Tampering-Detection',
+    tech: ['Python', 'OpenCV', 'Scikit-Image', 'SSIM Algorithm', 'Flask'],
     metrics: [
-      { label: 'IMAGE MODEL', value: 'OpenCV Feature Extraction' },
-      { label: 'TASK', value: 'Hair Density Classification' },
-      { label: 'STACK', value: 'Python Vision' },
+      { label: 'ALGORITHM', value: 'SSIM Comparison' },
+      { label: 'DETECTION', value: 'Micro-Pixel Alterations' },
+      { label: 'INTERFACE', value: 'Flask Web Upload' },
+    ],
+  },
+  {
+    id: 'forest-fire-risk',
+    number: '15',
+    title: 'Forest Fire Risk Analysis System',
+    category: 'DATA SCIENCE / ML',
+    filterGroup: 'ai-ml',
+    description:
+      'Predictive environmental analytics system forecasting forest fire risk probabilities using historical meteorological data, temperature indexes, and Random Forest regressors.',
+    githubUrl: 'https://github.com/Patil-Shital-9236/Forest-Fire-Risk-Analysis',
+    tech: ['Python', 'Random Forest', 'Pandas', 'Seaborn', 'Scikit-Learn'],
+    metrics: [
+      { label: 'MODEL', value: 'Random Forest Regressor' },
+      { label: 'DATASET', value: 'Meteorological Index' },
+      { label: 'OUTPUT', value: 'Risk Heatmap Visuals' },
+    ],
+  },
+  {
+    id: 'scalp-analysis',
+    number: '16',
+    title: 'Scalp Analysis & Baldness Detection',
+    category: 'AI / HEALTHCARE VISION',
+    filterGroup: 'ai-ml',
+    description:
+      'Dermatological image classification pipeline detecting scalp health conditions and estimating androgenetic alopecia stages using deep learning feature extraction.',
+    githubUrl: 'https://github.com/Patil-Shital-9236/Scalp-Analysis-Baldness-Detection',
+    tech: ['Python', 'PyTorch', 'OpenCV', 'Convolutional Nets', 'Flask'],
+    metrics: [
+      { label: 'FRAMEWORK', value: 'PyTorch Deep Learning' },
+      { label: 'INPUT', value: 'Scalp Trichoscopy Images' },
+      { label: 'OUTPUT', value: 'Alopecia Grading Score' },
     ],
   },
 ];
@@ -261,12 +289,12 @@ export const ProjectsSection: React.FC = () => {
 
   return (
     <section
-      id="work"
-      className="relative w-full bg-black text-[#E8DFD8] font-sans selection:bg-[#cbb59d] selection:text-black pt-20 pb-32 px-6 sm:px-12 lg:px-20"
+      id="projects"
+      className="relative w-full bg-black text-[#E8DFD8] font-sans selection:bg-[#cbb59d] selection:text-black pt-20 pb-32 px-6 sm:px-12 lg:px-20 overflow-hidden"
     >
-      {/* Studio Ambient Glows */}
-      <div className="absolute top-1/4 left-1/3 w-[36rem] h-[36rem] bg-[#D4AF37]/5 rounded-full blur-[180px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-[#8C6D4F]/5 rounded-full blur-[170px] pointer-events-none" />
+      {/* Background Lighting */}
+      <div className="absolute top-1/4 left-1/4 w-[36rem] h-[36rem] bg-[#D4AF37]/5 rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute bottom-1/3 right-1/4 w-[32rem] h-[32rem] bg-[#8C6D4F]/5 rounded-full blur-[170px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Eyebrow Header */}
@@ -281,141 +309,133 @@ export const ProjectsSection: React.FC = () => {
             className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            02 / FEATURED REPOSITORIES ({allProjects.length})
+            02 / SELECTED WORK ({allProjects.length} PROJECTS)
           </span>
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
         </motion.div>
 
-        {/* Section Headline & Intro */}
+        {/* Section Headline */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6"
+          className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6"
         >
           <h2
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight uppercase leading-[0.85] select-none"
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#D5CBC0] to-[#605448] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-              SELECTED WORKS.
+              FEATURED ENGINEERING.
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#F7E7C4] via-[#C99E5D] to-[#543B1A] drop-shadow-[0_8px_25px_rgba(201,158,93,0.35)]">
-              ENGINEERED VALUE.
+              PROTOTYPES &amp; SYSTEMS.
             </span>
           </h2>
 
-          <p
-            className="text-xs sm:text-sm font-light text-[#A8988B] max-w-md leading-relaxed"
-            style={{ fontFamily: "'Montserrat', sans-serif" }}
-          >
-            Explore all {allProjects.length} authentic GitHub projects spanning AI Systems, Deep Learning, Asynchronous Backend APIs, and Full Stack Web Applications.
-          </p>
-        </motion.div>
-
-        {/* Control Bar: Filters & View Switcher */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-12 border-b border-[#8C6D4F]/25 pb-6">
-          {/* Category Filter Tabs */}
-          <div className="flex flex-wrap items-center gap-2.5">
-            {[
-              { id: 'all', label: `ALL PROJECTS (${allProjects.length})` },
-              {
-                id: 'ai-ml',
-                label: `AI & ML (${allProjects.filter((p) => p.filterGroup === 'ai-ml').length})`,
-              },
-              {
-                id: 'fullstack-backend',
-                label: `BACKEND & APIs (${allProjects.filter((p) => p.filterGroup === 'fullstack-backend').length})`,
-              },
-              {
-                id: 'web-mobile',
-                label: `WEB & APPS (${allProjects.filter((p) => p.filterGroup === 'web-mobile').length})`,
-              },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveFilter(tab.id as FilterType)}
-                className={`px-4 py-2 text-[10px] sm:text-[10.5px] font-medium tracking-[0.18em] uppercase rounded-sm transition-all duration-300 ${
-                  activeFilter === tab.id
-                    ? 'bg-[#D4AF37] text-black shadow-[0_0_18px_rgba(212,175,55,0.35)]'
-                    : 'bg-[#120F0C] text-[#BDB0A4] border border-[#8C6D4F]/30 hover:border-[#D4AF37]/60 hover:text-white'
-                }`}
-                style={{ fontFamily: "'Montserrat', sans-serif" }}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Layout Mode Switcher */}
-          <div className="flex items-center space-x-2 bg-[#0E0C0A] p-1.5 rounded-sm border border-[#8C6D4F]/30 self-start lg:self-auto">
+          {/* View Switcher Controls */}
+          <div className="flex items-center space-x-2 bg-[#120F0C] p-1.5 rounded-md border border-[#8C6D4F]/30 self-start lg:self-auto">
             <button
               onClick={() => setViewMode('grid')}
-              className={`flex items-center space-x-2 px-3 py-1.5 text-[10px] font-mono uppercase transition-all rounded-sm ${
+              className={`px-4 py-2 text-[10px] font-mono tracking-[0.2em] uppercase rounded transition-all duration-300 ${
                 viewMode === 'grid'
-                  ? 'bg-[#8C6D4F]/40 text-[#F7E7C4] border border-[#D4AF37]/50'
+                  ? 'bg-[#D4AF37] text-black font-bold shadow-[0_0_15px_rgba(212,175,55,0.4)]'
                   : 'text-[#A8988B] hover:text-white'
               }`}
             >
-              <span>⣿ GRID VIEW</span>
+              ⣿ GRID VIEW ({filteredProjects.length})
             </button>
             <button
               onClick={() => setViewMode('stack')}
-              className={`flex items-center space-x-2 px-3 py-1.5 text-[10px] font-mono uppercase transition-all rounded-sm ${
+              className={`px-4 py-2 text-[10px] font-mono tracking-[0.2em] uppercase rounded transition-all duration-300 ${
                 viewMode === 'stack'
-                  ? 'bg-[#8C6D4F]/40 text-[#F7E7C4] border border-[#D4AF37]/50'
+                  ? 'bg-[#D4AF37] text-black font-bold shadow-[0_0_15px_rgba(212,175,55,0.4)]'
                   : 'text-[#A8988B] hover:text-white'
               }`}
             >
-              <span>🎴 STACK DECK</span>
+              🎴 STACK DECK
             </button>
           </div>
+        </motion.div>
+
+        {/* Category Filter Tabs */}
+        <div className="flex flex-wrap items-center gap-2.5 mb-12 border-b border-[#8C6D4F]/25 pb-6">
+          {[
+            { id: 'all', label: `ALL PROJECTS (${allProjects.length})` },
+            {
+              id: 'ai-ml',
+              label: `AI & ML (${allProjects.filter((p) => p.filterGroup === 'ai-ml').length})`,
+            },
+            {
+              id: 'fullstack-backend',
+              label: `BACKEND & APIs (${allProjects.filter((p) => p.filterGroup === 'fullstack-backend').length})`,
+            },
+            {
+              id: 'web-mobile',
+              label: `WEB & APPS (${allProjects.filter((p) => p.filterGroup === 'web-mobile').length})`,
+            },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveFilter(tab.id as FilterType)}
+              className={`px-4 py-2 text-[10px] sm:text-[10.5px] font-medium tracking-[0.18em] uppercase rounded-sm transition-all duration-300 ${
+                activeFilter === tab.id
+                  ? 'bg-[#D4AF37] text-black shadow-[0_0_18px_rgba(212,175,55,0.35)]'
+                  : 'bg-[#120F0C] text-[#BDB0A4] border border-[#8C6D4F]/30 hover:border-[#D4AF37]/60 hover:text-white'
+              }`}
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
 
-        {/* ================= VIEW MODE 1: GRID VIEW (Default, All Visible) ================= */}
-        {viewMode === 'grid' && (
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                className="relative flex flex-col justify-between w-full rounded-xl border border-[#8C6D4F]/40 bg-[#0E0C0A] p-7 sm:p-8 shadow-[0_15px_45px_rgba(0,0,0,0.85)] group overflow-hidden transition-all duration-300 hover:border-[#D4AF37] hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)]"
-              >
-                {/* Top Gold Horizon Edge */}
-                <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/70 to-transparent" />
-
-                {/* Corner Minimal L-Brackets */}
-                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
-                <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
-
-                {/* Background Watermark Number */}
-                <span
-                  className="absolute -bottom-4 -right-2 text-7xl font-bold text-[#EAD8C7]/5 select-none pointer-events-none leading-none"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+        {/* View Mode Render */}
+        <AnimatePresence mode="wait">
+          {viewMode === 'grid' ? (
+            /* ================= GRID VIEW ================= */
+            <motion.div
+              key="grid"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.4 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"
+            >
+              {filteredProjects.map((project, idx) => (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.05 }}
+                  className="relative flex flex-col justify-between p-7 bg-[#0A0806] border border-[#8C6D4F]/30 hover:border-[#D4AF37] rounded-xl transition-all duration-300 group overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.85)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)]"
                 >
-                  {project.number}
-                </span>
+                  {/* Top Border Flare */}
+                  <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/70 to-transparent" />
 
-                <div className="relative z-10 flex-1 flex flex-col justify-between">
+                  {/* Corner Minimal L-Brackets */}
+                  <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#D4AF37]/50 group-hover:border-[#D4AF37] transition-colors" />
+                  <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#D4AF37]/50 group-hover:border-[#D4AF37] transition-colors" />
+
                   <div>
-                    {/* Category & Number Header */}
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-[#D4AF37]">
-                        {project.category}
+                    {/* Header Row */}
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-[10px] font-mono tracking-[0.25em] text-[#D4AF37]">
+                        PROJ // {project.number}
                       </span>
-                      <span className="text-xs font-mono font-bold text-[#8C6D4F]">
-                        #{project.number}
+                      <span
+                        className="text-[9.5px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] bg-[#120F0C] px-2.5 py-1 rounded border border-[#8C6D4F]/20"
+                        style={{ fontFamily: "'Montserrat', sans-serif" }}
+                      >
+                        {project.category}
                       </span>
                     </div>
 
                     {/* Title */}
                     <h3
-                      className="text-3xl sm:text-4xl font-normal tracking-tight text-white mb-3 group-hover:text-[#F7E7C4] transition-colors uppercase leading-[0.95]"
+                      className="text-2xl sm:text-3xl font-normal tracking-tight text-[#F4EBE2] mb-3 group-hover:text-white transition-colors uppercase leading-[0.95]"
                       style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                     >
                       {project.title}
@@ -431,26 +451,12 @@ export const ProjectsSection: React.FC = () => {
                   </div>
 
                   <div>
-                    {/* Metrics Badges */}
-                    <div className="grid grid-cols-3 gap-2 mb-6 p-3 rounded-sm border border-[#8C6D4F]/20 bg-[#050403]">
-                      {project.metrics.map((m) => (
-                        <div key={m.label} className="text-center">
-                          <span className="block text-[8.5px] font-mono text-[#8C6D4F] uppercase tracking-wider mb-0.5 truncate">
-                            {m.label}
-                          </span>
-                          <span className="block text-[10px] font-mono font-medium text-[#F7E7C4] truncate">
-                            {m.value}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Tech Stack Pills */}
-                    <div className="flex flex-wrap gap-1.5 mb-6">
+                    {/* Tech Pills */}
+                    <div className="flex flex-wrap gap-1.5 mb-6 pt-4 border-t border-[#8C6D4F]/20">
                       {project.tech.map((t) => (
                         <span
                           key={t}
-                          className="px-2.5 py-1 text-[9.5px] font-medium tracking-[0.14em] uppercase rounded-sm border border-[#8C6D4F]/30 bg-[#14100D] text-[#E8D7C5] group-hover:border-[#D4AF37]/40 transition-colors"
+                          className="px-2 py-0.5 text-[9px] font-medium tracking-[0.14em] uppercase rounded-sm border border-[#8C6D4F]/30 bg-[#120F0C] text-[#E8D7C5] group-hover:border-[#D4AF37]/40 transition-colors"
                           style={{ fontFamily: "'Montserrat', sans-serif" }}
                         >
                           {t}
@@ -458,162 +464,154 @@ export const ProjectsSection: React.FC = () => {
                       ))}
                     </div>
 
-                    {/* Action Links */}
-                    <div className="flex items-center gap-3 pt-4 border-t border-[#8C6D4F]/20">
+                    {/* Action Buttons */}
+                    <div className="flex items-center space-x-3">
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 inline-flex items-center justify-center space-x-2 py-3 border border-[#8C6D4F]/60 bg-[#14100D] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#EAD8C7] hover:text-black text-[10.5px] font-medium tracking-[0.18em] uppercase transition-all duration-300"
+                        className="flex-1 py-2.5 text-center border border-[#8C6D4F]/40 bg-[#120F0C] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#E8DFD8] hover:text-black text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
                         style={{ fontFamily: "'Montserrat', sans-serif" }}
                       >
-                        <span>GITHUB REPO</span>
-                        <span className="text-xs">↗</span>
+                        GITHUB REPO ↗
                       </a>
-
                       {project.liveUrl && (
                         <a
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex-1 inline-flex items-center justify-center space-x-2 py-3 border border-[#D4AF37]/60 bg-[#D4AF37]/10 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[10.5px] font-medium tracking-[0.18em] uppercase transition-all duration-300"
+                          className="flex-1 py-2.5 text-center border border-[#D4AF37] bg-[#D4AF37]/15 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
                           style={{ fontFamily: "'Montserrat', sans-serif" }}
                         >
-                          <span>LIVE DEMO</span>
-                          <span className="text-xs">🌐</span>
+                          LIVE DEMO ⚡
                         </a>
                       )}
                     </div>
                   </div>
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        )}
-
-        {/* ================= VIEW MODE 2: STACKED DECK ================= */}
-        {viewMode === 'stack' && (
-          <AnimatePresence mode="wait">
-            <ScrollStack
-              key={activeFilter}
-              itemDistance={20}
-              itemScale={0.035}
-              itemStackDistance={28}
-              stackPosition="5%"
-              scaleEndPosition="2%"
-              baseScale={0.88}
-              useWindowScroll={true}
+                </motion.div>
+              ))}
+            </motion.div>
+          ) : (
+            /* ================= STACK DECK VIEW ================= */
+            <motion.div
+              key="stack"
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.98 }}
+              transition={{ duration: 0.4 }}
+              className="w-full"
             >
-              {filteredProjects.map((project) => (
-                <ScrollStackItem key={project.id}>
-                  <div className="relative w-full rounded-2xl border border-[#8C6D4F]/50 bg-[#0E0C0A] p-8 sm:p-12 shadow-[0_25px_70px_rgba(0,0,0,0.98)] group overflow-hidden transition-colors duration-500 hover:border-[#D4AF37]">
-                    <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/80 to-transparent" />
+              <ScrollStack
+                className="py-10"
+                itemDistance={60}
+              >
+                {filteredProjects.map((project) => (
+                  <ScrollStackItem key={project.id}>
+                    <div className="relative w-full p-8 sm:p-12 bg-[#0C0A08] border border-[#8C6D4F]/40 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.9)] overflow-hidden group">
+                      {/* Top Gold Horizon Edge */}
+                      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
 
-                    <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
-                    <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
-                    <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
-                    <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
+                      {/* Corner Accents */}
+                      <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]" />
+                      <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]" />
 
-                    <span
-                      className="absolute -bottom-6 -right-3 text-8xl sm:text-9xl font-bold text-[#EAD8C7]/5 select-none pointer-events-none leading-none"
-                      style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                    >
-                      {project.number}
-                    </span>
+                      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                        {/* Left Info */}
+                        <div className="lg:col-span-7 flex flex-col justify-between h-full">
+                          <div>
+                            <div className="flex items-center space-x-3 mb-4">
+                              <span className="text-xs font-mono tracking-[0.25em] text-[#D4AF37]">
+                                PROJ // {project.number}
+                              </span>
+                              <span
+                                className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] bg-[#14100D] px-3 py-1 rounded border border-[#8C6D4F]/30"
+                                style={{ fontFamily: "'Montserrat', sans-serif" }}
+                              >
+                                {project.category}
+                              </span>
+                            </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
-                      <div className="lg:col-span-7 flex flex-col justify-between">
-                        <div>
-                          <div className="flex items-center space-x-3 mb-4">
-                            <span className="text-xs font-mono font-bold text-[#D4AF37]">
-                              {project.number}
-                            </span>
-                            <span className="text-[10.5px] font-mono tracking-[0.25em] uppercase text-[#A8988B]">
-                              {project.category}
-                            </span>
-                          </div>
+                            <h3
+                              className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white mb-4 uppercase leading-[0.9]"
+                              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                            >
+                              {project.title}
+                            </h3>
 
-                          <h3
-                            className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white mb-4 group-hover:text-[#F7E7C4] transition-colors uppercase leading-[0.9]"
-                            style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                          >
-                            {project.title}
-                          </h3>
-
-                          <p
-                            className="text-xs sm:text-sm md:text-[14px] font-light text-[#BDB0A4] leading-[1.85] tracking-wide mb-8 max-w-2xl"
-                            style={{ fontFamily: "'Montserrat', sans-serif" }}
-                          >
-                            {project.description}
-                          </p>
-                        </div>
-
-                        <div className="flex flex-wrap gap-2 pt-6 border-t border-[#8C6D4F]/25">
-                          {project.tech.map((t) => (
-                            <span
-                              key={t}
-                              className="px-3 py-1 text-[10px] font-medium tracking-[0.16em] uppercase rounded-sm border border-[#8C6D4F]/40 bg-[#16120E] text-[#E8D7C5] group-hover:border-[#D4AF37]/50 transition-all duration-300"
+                            <p
+                              className="text-xs sm:text-sm text-[#BDB0A4] font-light leading-relaxed mb-8 max-w-xl"
                               style={{ fontFamily: "'Montserrat', sans-serif" }}
                             >
-                              {t}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+                              {project.description}
+                            </p>
+                          </div>
 
-                      <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-6 lg:pl-6 lg:border-l lg:border-[#8C6D4F]/25">
-                        <div className="space-y-3">
-                          <span className="text-[9.5px] font-mono tracking-[0.25em] uppercase text-[#8C6D4F] block mb-2">
-                            ARCHITECTURE METRICS
+                          <div>
+                            <div className="flex flex-wrap gap-2 mb-8">
+                              {project.tech.map((t) => (
+                                <span
+                                  key={t}
+                                  className="px-3 py-1 text-[10px] font-medium tracking-[0.15em] uppercase rounded-sm border border-[#8C6D4F]/40 bg-[#14100D] text-[#E8D7C5]"
+                                  style={{ fontFamily: "'Montserrat', sans-serif" }}
+                                >
+                                  {t}
+                                </span>
+                              ))}
+                            </div>
+
+                            <div className="flex items-center space-x-4">
+                              <a
+                                href={project.githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-6 py-3 border border-[#8C6D4F] bg-[#14100D] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-white hover:text-black text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                                style={{ fontFamily: "'Montserrat', sans-serif" }}
+                              >
+                                VIEW SOURCE CODE ↗
+                              </a>
+                              {project.liveUrl && (
+                                <a
+                                  href={project.liveUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="px-6 py-3 border border-[#D4AF37] bg-[#D4AF37]/20 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                                  style={{ fontFamily: "'Montserrat', sans-serif" }}
+                                >
+                                  OPEN LIVE DEMO ⚡
+                                </a>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Right Metrics Box */}
+                        <div className="lg:col-span-5 bg-[#050403] p-6 rounded-xl border border-[#8C6D4F]/30 space-y-4">
+                          <span
+                            className="block text-[10px] font-mono tracking-[0.3em] uppercase text-[#D4AF37] pb-3 border-b border-[#8C6D4F]/20"
+                            style={{ fontFamily: "'Montserrat', sans-serif" }}
+                          >
+                            SYSTEM METRICS &amp; SPECS
                           </span>
+
                           {project.metrics.map((m) => (
-                            <div
-                              key={m.label}
-                              className="p-3.5 rounded-sm border border-[#8C6D4F]/25 bg-[#050403] flex items-center justify-between"
-                            >
-                              <span className="text-[10px] font-mono text-[#A8988B]">
+                            <div key={m.label} className="space-y-1">
+                              <span className="block text-[9.5px] font-mono text-[#8C6D4F]">
                                 {m.label}
                               </span>
-                              <span className="text-[11px] font-mono font-medium text-[#F7E7C4]">
+                              <span className="block text-sm font-semibold text-[#F7E7C4]">
                                 {m.value}
                               </span>
                             </div>
                           ))}
                         </div>
-
-                        <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                          <a
-                            href={project.githubUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1 inline-flex items-center justify-center space-x-2 px-5 py-3.5 border border-[#8C6D4F] bg-[#16120E] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#EAD8C7] hover:text-black text-[11px] font-medium tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.1)]"
-                            style={{ fontFamily: "'Montserrat', sans-serif" }}
-                          >
-                            <span>GITHUB REPO</span>
-                            <span className="text-xs">↗</span>
-                          </a>
-
-                          {project.liveUrl && (
-                            <a
-                              href={project.liveUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex-1 inline-flex items-center justify-center space-x-2 px-5 py-3.5 border border-[#D4AF37]/60 bg-[#D4AF37]/10 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[11px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
-                              style={{ fontFamily: "'Montserrat', sans-serif" }}
-                            >
-                              <span>LIVE DEMO</span>
-                              <span className="text-xs">🌐</span>
-                            </a>
-                          )}
-                        </div>
                       </div>
                     </div>
-                  </div>
-                </ScrollStackItem>
-              ))}
-            </ScrollStack>
-          </AnimatePresence>
-        )}
+                  </ScrollStackItem>
+                ))}
+              </ScrollStack>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
