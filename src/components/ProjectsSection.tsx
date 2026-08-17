@@ -58,6 +58,7 @@ const allProjects: Project[] = [
     description:
       'Solved the problem of creating images manually from scratch by allowing users to generate images directly from text prompts. Built the application with React.js + Flask, connecting the frontend with the AI image-generation backend. Used Stable Diffusion, caching, and Docker to generate images, avoid repeated requests, and simplify backend deployment.',
     githubUrl: 'https://github.com/Patil-Shital-9236',
+    liveUrl: 'https://text-to-image-w2ji.vercel.app/login',
     tech: ['React.js', 'Flask', 'Stable Diffusion', 'Docker', 'Python', 'REST APIs'],
     metrics: [
       { label: 'AI MODEL', value: 'Stable Diffusion' },
