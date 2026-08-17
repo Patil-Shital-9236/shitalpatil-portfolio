@@ -336,26 +336,43 @@ export const ProjectsSection: React.FC = () => {
           </h2>
 
           {/* View Switcher Controls */}
-          <div className="flex items-center space-x-2 bg-[#120F0C] p-1.5 rounded-md border border-[#8C6D4F]/30 self-start lg:self-auto">
+          <div className="relative inline-flex items-center bg-[#0C0A08] p-1.5 rounded-full border border-[#8C6D4F]/40 shadow-[0_4px_25px_rgba(0,0,0,0.85)] self-start lg:self-auto">
             <button
               onClick={() => setViewMode('grid')}
-              className={`px-4 py-2 text-[10px] font-mono tracking-[0.2em] uppercase rounded transition-all duration-300 ${
-                viewMode === 'grid'
-                  ? 'bg-[#D4AF37] text-black font-bold shadow-[0_0_15px_rgba(212,175,55,0.4)]'
-                  : 'text-[#A8988B] hover:text-white'
+              className={`relative z-10 px-5 py-2.5 text-[10.5px] font-mono tracking-[0.2em] uppercase transition-colors duration-300 flex items-center space-x-2 rounded-full ${
+                viewMode === 'grid' ? 'text-black font-semibold' : 'text-[#A8988B] hover:text-white'
               }`}
             >
-              ⣿ GRID VIEW ({filteredProjects.length})
+              {viewMode === 'grid' && (
+                <motion.div
+                  layoutId="activeViewPill"
+                  className="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#F7E7C4] to-[#C99E5D] rounded-full shadow-[0_0_20px_rgba(212,175,55,0.45)] z-[-1]"
+                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                />
+              )}
+              <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M1 2.5A1.5 1.5 0 012.5 1h3A1.5 1.5 0 017 2.5v3A1.5 1.5 0 015.5 7h-3A1.5 1.5 0 011 5.5v-3zM9 2.5A1.5 1.5 0 0110.5 1h3A1.5 1.5 0 0115 2.5v3A1.5 1.5 0 0113.5 7h-3A1.5 1.5 0 019 5.5v-3zM1 10.5A1.5 1.5 0 012.5 9h3A1.5 1.5 0 017 10.5v3A1.5 1.5 0 015.5 15h-3A1.5 1.5 0 011 13.5v-3zM9 10.5A1.5 1.5 0 0110.5 9h3a1.5 1.5 0 011.5 1.5v3a1.5 1.5 0 01-1.5 1.5h-3A1.5 1.5 0 019 13.5v-3z"/>
+              </svg>
+              <span>GRID VIEW ({filteredProjects.length})</span>
             </button>
+
             <button
               onClick={() => setViewMode('stack')}
-              className={`px-4 py-2 text-[10px] font-mono tracking-[0.2em] uppercase rounded transition-all duration-300 ${
-                viewMode === 'stack'
-                  ? 'bg-[#D4AF37] text-black font-bold shadow-[0_0_15px_rgba(212,175,55,0.4)]'
-                  : 'text-[#A8988B] hover:text-white'
+              className={`relative z-10 px-5 py-2.5 text-[10.5px] font-mono tracking-[0.2em] uppercase transition-colors duration-300 flex items-center space-x-2 rounded-full ${
+                viewMode === 'stack' ? 'text-black font-semibold' : 'text-[#A8988B] hover:text-white'
               }`}
             >
-              🎴 STACK DECK
+              {viewMode === 'stack' && (
+                <motion.div
+                  layoutId="activeViewPill"
+                  className="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#F7E7C4] to-[#C99E5D] rounded-full shadow-[0_0_20px_rgba(212,175,55,0.45)] z-[-1]"
+                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                />
+              )}
+              <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M2.5 3A1.5 1.5 0 001 4.5v7A1.5 1.5 0 002.5 13h11a1.5 1.5 0 001.5-1.5v-7A1.5 1.5 0 0013.5 3h-11zM14 4.5v7a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-7a.5.5 0 01.5-.5h11a.5.5 0 01.5.5z"/>
+              </svg>
+              <span>STACK DECK</span>
             </button>
           </div>
         </motion.div>
