@@ -372,7 +372,7 @@ export const ProjectsSection: React.FC = () => {
               <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M2.5 3A1.5 1.5 0 001 4.5v7A1.5 1.5 0 002.5 13h11a1.5 1.5 0 001.5-1.5v-7A1.5 1.5 0 0013.5 3h-11zM14 4.5v7a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-7a.5.5 0 01.5-.5h11a.5.5 0 01.5.5z"/>
               </svg>
-              <span>STACK DECK</span>
+              <span>STACK DECK (TOP 4)</span>
             </button>
           </div>
         </motion.div>
@@ -523,7 +523,7 @@ export const ProjectsSection: React.FC = () => {
                 className="py-10"
                 itemDistance={60}
               >
-                {filteredProjects.map((project) => (
+                {filteredProjects.slice(0, 4).map((project) => (
                   <ScrollStackItem key={project.id}>
                     <div className="relative w-full p-8 sm:p-12 bg-[#0C0A08] border border-[#8C6D4F]/40 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.9)] overflow-hidden group">
                       {/* Top Gold Horizon Edge */}
