@@ -5,10 +5,9 @@ interface Certificate {
   id: string;
   title: string;
   issuer: string;
-  category: 'cloud-ai' | 'algorithms' | 'fullstack';
+  category: 'ai-ml' | 'fullstack-backend' | 'cybersecurity';
   categoryLabel: string;
   date: string;
-  credentialId: string;
   badge: string;
   badgeColor: string;
   description: string;
@@ -16,132 +15,130 @@ interface Certificate {
   certificateUrl: string;
 }
 
-const LINKEDIN_DOCS_URL = 'https://www.linkedin.com/in/shital-patil-365759237/recent-activity/documents/';
-
 const certificatesList: Certificate[] = [
   {
-    id: 'google-devops',
-    title: 'Gemini for DevOps Engineers – Official Skill Badge',
-    issuer: 'Google Cloud Skills Boost',
-    category: 'cloud-ai',
-    categoryLabel: 'GOOGLE CLOUD & AI',
-    date: 'Issued June 2026',
-    credentialId: 'GCP-DEV-2026-9236',
-    badge: '☁️ GOOGLE CLOUD SKILL BADGE',
-    badgeColor: 'from-[#4285F4]/20 to-[#34A853]/20 border-[#4285F4]/50',
+    id: 'genai-literacy',
+    title: 'Generative AI Literacy Certification',
+    issuer: 'LinkedIn / AI Literacy',
+    category: 'ai-ml',
+    categoryLabel: 'AI & MACHINE LEARNING',
+    date: 'Verified',
+    badge: '🤖 GENERATIVE AI LITERACY',
+    badgeColor: 'from-[#4285F4]/20 to-[#D4AF37]/20 border-[#4285F4]/60',
     description:
-      'Official Google Cloud Skill Badge demonstrating proficiency in AI-assisted software delivery pipelines, cloud infrastructure automation, intelligent log analysis, and automated CI/CD workflows using Gemini AI on Google Cloud Platform.',
-    skills: ['Google Cloud', 'Gemini AI', 'DevOps Automation', 'CI/CD Pipelines', 'Cloud Architecture'],
-    certificateUrl: LINKEDIN_DOCS_URL,
+      'Certified in Generative AI Literacy, covering fundamental concepts of Large Language Models (LLMs), prompt engineering principles, AI productivity integration, and enterprise AI usage.',
+    skills: ['Generative AI', 'LLMs', 'Prompt Engineering', 'AI Productivity'],
+    certificateUrl:
+      'https://www.linkedin.com/feed/update/urn:li:activity:7452352062857699328?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7452352062857699328%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=UCYo6Bz%2FSRWySKesCm5vVw%3D%3D',
   },
   {
-    id: 'google-security',
-    title: 'Gemini for Security Engineers – Specialization Certificate',
-    issuer: 'Google Cloud Skills Boost',
-    category: 'cloud-ai',
-    categoryLabel: 'GOOGLE CLOUD & AI',
-    date: 'Issued June 2026',
-    credentialId: 'GCP-SEC-2026-8812',
-    badge: '🛡️ SECURITY SPECIALIZATION BADGE',
-    badgeColor: 'from-[#EA4335]/20 to-[#FBBC05]/20 border-[#EA4335]/50',
-    description:
-      'Verified Google Cloud specialization in AI-driven security operations, threat detection intelligence, IAM posture management, and automated security policy synthesis.',
-    skills: ['Cloud Security', 'Gemini Security', 'Threat Detection', 'IAM Policy', 'Security Operations'],
-    certificateUrl: LINKEDIN_DOCS_URL,
-  },
-  {
-    id: 'google-genai-leader',
-    title: 'Google Cloud Generative AI Leader Track Certificate',
-    issuer: 'Google Cloud Training',
-    category: 'cloud-ai',
-    categoryLabel: 'GOOGLE CLOUD & AI',
-    date: 'Issued May 2026',
-    credentialId: 'GCP-GENAI-2026-7719',
-    badge: '🚀 GENERATIVE AI LEADER CERTIFICATE',
+    id: 'sankey-arise',
+    title: 'Sankey Arise Program Certificate',
+    issuer: 'Sankey Solutions',
+    category: 'fullstack-backend',
+    categoryLabel: 'FULL STACK & BACKEND',
+    date: 'Verified',
+    badge: '⚡ SANKEY ARISE PROGRAM',
     badgeColor: 'from-[#D4AF37]/20 to-[#8C6D4F]/20 border-[#D4AF37]/60',
     description:
-      'Comprehensive Google certification certifying mastery of Large Language Model (LLM) architectures, prompt engineering strategies, Gemini API integrations, and enterprise AI transformation.',
-    skills: ['Generative AI', 'LLM Architecture', 'Gemini API', 'Prompt Engineering', 'Enterprise AI'],
-    certificateUrl: LINKEDIN_DOCS_URL,
+      'Completed the intensive Sankey Arise Training Program specializing in software engineering, full stack architecture, data structures, and production web applications.',
+    skills: ['Software Engineering', 'Full Stack Development', 'Data Structures', 'Web Applications'],
+    certificateUrl:
+      'https://www.linkedin.com/feed/update/urn:li:activity:7452312394036326400?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7452312394036326400%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=1FjkBEnqQPyE%2FwT1I9AdLQ%3D%3D',
   },
   {
-    id: 'google-responsible-ai',
-    title: 'Responsible AI: Applying AI Principles with Google Cloud',
-    issuer: 'Google Cloud',
-    category: 'cloud-ai',
-    categoryLabel: 'GOOGLE CLOUD & AI',
-    date: 'Issued May 2026',
-    credentialId: 'GCP-ETH-2026-3401',
-    badge: '⚖️ RESPONSIBLE AI GOVERNANCE BADGE',
-    badgeColor: 'from-[#34A853]/20 to-[#4285F4]/20 border-[#34A853]/50',
+    id: 'cybersecurity-simulation',
+    title: 'Cybersecurity Job Simulation Certificate',
+    issuer: 'Forage / Cybersecurity',
+    category: 'cybersecurity',
+    categoryLabel: 'CYBERSECURITY & CLOUD',
+    date: 'Verified',
+    badge: '🛡️ CYBERSECURITY SIMULATION',
+    badgeColor: 'from-[#EA4335]/20 to-[#FBBC05]/20 border-[#EA4335]/60',
     description:
-      'Official Google accreditation in implementing Responsible AI frameworks, model fairness auditing, bias mitigation, safety benchmarks, and ethical AI deployment principles.',
-    skills: ['Responsible AI', 'AI Ethics', 'Bias Mitigation', 'Safety Evaluation', 'Governance'],
-    certificateUrl: LINKEDIN_DOCS_URL,
+      'Completed the Cybersecurity Virtual Experience Program on Forage, analyzing network threat intelligence, security posture management, vulnerability assessments, and incident response.',
+    skills: ['Cybersecurity', 'Threat Analysis', 'Network Defense', 'Vulnerability Assessment'],
+    certificateUrl:
+      'https://www.linkedin.com/feed/update/urn:li:activity:7388916103143669760?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7388916103143669760%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=smdy2cuYRcyfy%2FR9cq%2Fe1A%3D%3D',
   },
   {
-    id: 'leetcode-100-days',
-    title: 'LeetCode 100+ Days Problem Solving Award (2025)',
-    issuer: 'LeetCode Platform',
-    category: 'algorithms',
-    categoryLabel: 'ALGORITHMS & CODING',
-    date: 'Earned 2025',
-    credentialId: 'LC-100-BADGE-2025',
-    badge: '🏆 LEETCODE 100 DAYS BADGE',
+    id: 'gcp-genai-leader',
+    title: 'Google Cloud Generative AI Leader Track Certificate',
+    issuer: 'Google Cloud',
+    category: 'ai-ml',
+    categoryLabel: 'AI & MACHINE LEARNING',
+    date: 'Verified',
+    badge: '☁️ GOOGLE CLOUD GENAI LEADER',
+    badgeColor: 'from-[#4285F4]/20 to-[#34A853]/20 border-[#4285F4]/60',
+    description:
+      'Awarded official Google Cloud Generative AI Leader Track certificate for demonstrating expertise in Gemini models, LLM architectures, Vertex AI, and cloud AI deployment.',
+    skills: ['Google Cloud', 'Generative AI', 'Gemini Models', 'Vertex AI', 'Cloud AI'],
+    certificateUrl:
+      'https://www.linkedin.com/feed/update/urn:li:activity:7383833829851049985?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7383833829851049985%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=4aZUD8r5QiCpz2GZKWJc9A%3D%3D',
+  },
+  {
+    id: 'forage-software-cert',
+    title: 'Forage Software Engineering Job Simulation Certificate',
+    issuer: 'Forage',
+    category: 'fullstack-backend',
+    categoryLabel: 'FULL STACK & BACKEND',
+    date: 'Verified',
+    badge: '💼 FORAGE JOB SIMULATION',
+    badgeColor: 'from-[#34A853]/20 to-[#4285F4]/20 border-[#34A853]/60',
+    description:
+      'Completed practical software engineering job simulation on Forage solving real-world development tasks, code refactoring, API integration, and software design.',
+    skills: ['Software Engineering', 'Code Refactoring', 'API Integration', 'Software Design'],
+    certificateUrl:
+      'https://www.linkedin.com/feed/update/urn:li:activity:7381689084806807552?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7381689084806807552%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=TbupIQcqRauLeuk%2B8QPWLQ%3D%3D',
+  },
+  {
+    id: 'naukri-campus',
+    title: 'NaukriCampus Certificate of Participation',
+    issuer: 'NaukriCampus',
+    category: 'fullstack-backend',
+    categoryLabel: 'FULL STACK & BACKEND',
+    date: 'Verified',
+    badge: '🏆 NAUKRICAMPUS PARTICIPATION',
     badgeColor: 'from-[#FFA116]/20 to-[#D4AF37]/20 border-[#FFA116]/60',
     description:
-      'Recognized problem-solving award for completing over 110+ Data Structures & Algorithms challenges (Arrays, Hash Maps, Dynamic Programming, Trees, Graphs, System Design) with consistent daily practice.',
-    skills: ['Data Structures', 'Algorithms', 'Dynamic Programming', 'Problem Solving', 'System Design'],
-    certificateUrl: LINKEDIN_DOCS_URL,
+      'Official Certificate of Participation in NaukriCampus national engineering skill evaluation and competitive technical assessment.',
+    skills: ['Technical Assessment', 'Coding Evaluation', 'Problem Solving', 'Engineering Fundamentals'],
+    certificateUrl:
+      'https://www.linkedin.com/feed/update/urn:li:activity:7370824233939238912?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7370824233939238912%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=NrhCe%2FXsS7%2BtZ82vTRkFtg%3D%3D',
   },
   {
-    id: 'genai-streamlit',
-    title: 'Develop GenAI Apps with Gemini & Streamlit Certificate',
-    issuer: 'Google Cloud & Streamlit',
-    category: 'cloud-ai',
-    categoryLabel: 'GOOGLE CLOUD & AI',
-    date: 'Issued 2025',
-    credentialId: 'GCP-STRM-2025-5021',
-    badge: '🤖 FULL STACK AI APP BADGE',
-    badgeColor: 'from-[#FF4B4B]/20 to-[#D4AF37]/20 border-[#FF4B4B]/50',
+    id: 'cognifyz-ml-internship',
+    title: 'Machine Learning Internship Certificate – Cognifyz',
+    issuer: 'Cognifyz Technologies',
+    category: 'ai-ml',
+    categoryLabel: 'AI & MACHINE LEARNING',
+    date: 'Verified',
+    badge: '🧠 MACHINE LEARNING INTERNSHIP',
+    badgeColor: 'from-[#8C6D4F]/20 to-[#D4AF37]/20 border-[#D4AF37]/60',
     description:
-      'Practical engineering certificate verifying ability to build and deploy end-to-end Generative AI applications leveraging Google Gemini API, vector database retrieval, and Streamlit web interfaces.',
-    skills: ['Python', 'Streamlit', 'Gemini API', 'Vector Search', 'Full Stack AI'],
-    certificateUrl: LINKEDIN_DOCS_URL,
+      'Successfully completed Machine Learning Internship at Cognifyz Technologies building predictive ML models, data preprocessing pipelines, evaluation metrics, and algorithm implementations.',
+    skills: ['Machine Learning', 'Python', 'Scikit-Learn', 'Data Analysis', 'Predictive Modeling'],
+    certificateUrl:
+      'https://www.linkedin.com/feed/update/urn:li:activity:7276629654143123456?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7276629654143123456%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=lJ4SaLQtQnu%2F7asdEs8I2g%3D%3D',
   },
   {
-    id: 'prompt-engineering',
-    title: 'Text Prompt Engineering & LLM Optimization',
-    issuer: 'DeepLearning.AI / Google Cloud',
-    category: 'algorithms',
-    categoryLabel: 'ALGORITHMS & CODING',
-    date: 'Issued 2025',
-    credentialId: 'DLAI-PROMPT-2025-4190',
-    badge: '🧠 PROMPT ENGINEERING CERTIFICATE',
-    badgeColor: 'from-[#8C6D4F]/20 to-[#D4AF37]/20 border-[#D4AF37]/50',
-    description:
-      'Advanced prompt engineering certificate covering Few-Shot Prompting, Chain-of-Thought (CoT) reasoning, System Role Instructions, LLM parameter tuning, and output formatting.',
-    skills: ['Prompt Engineering', 'Chain-of-Thought', 'System Roles', 'LLM Tuning', 'AI Inference'],
-    certificateUrl: LINKEDIN_DOCS_URL,
-  },
-  {
-    id: 'fullstack-web-cert',
-    title: 'Full Stack & REST API Engineering Certificate',
-    issuer: 'Enterprise Web Certification',
-    category: 'fullstack',
-    categoryLabel: 'FULL STACK',
-    date: 'Issued 2025',
-    credentialId: 'FS-CERT-2025-9011',
-    badge: '⚡ FULL STACK CERTIFICATION',
+    id: 'backend-internship',
+    title: 'Backend Web Development Internship Certificate',
+    issuer: 'Tech Internship Program',
+    category: 'fullstack-backend',
+    categoryLabel: 'FULL STACK & BACKEND',
+    date: 'Verified',
+    badge: '⚙️ BACKEND WEB DEVELOPMENT INTERNSHIP',
     badgeColor: 'from-[#D4AF37]/20 to-[#120F0C]/40 border-[#D4AF37]/60',
     description:
-      'Comprehensive engineering certificate covering asynchronous RESTful API design, Node.js Express server architectures, PostgreSQL/MongoDB database integration, and React frontend systems.',
-    skills: ['Node.js', 'Express.js', 'React.js', 'REST APIs', 'MongoDB', 'SQL'],
-    certificateUrl: LINKEDIN_DOCS_URL,
+      'Awarded Backend Web Development Internship completion for designing RESTful APIs, database schema design, asynchronous server handlers, and scalable backend logic.',
+    skills: ['Backend Development', 'Node.js', 'REST APIs', 'Database Architecture', 'Server Security'],
+    certificateUrl:
+      'https://www.linkedin.com/feed/update/urn:li:activity:7272643905207115777?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7272643905207115777%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=qtAYnyZaTHGfwZl3zdFakg%3D%3D',
   },
 ];
 
-type FilterType = 'all' | 'cloud-ai' | 'algorithms' | 'fullstack';
+type FilterType = 'all' | 'ai-ml' | 'fullstack-backend' | 'cybersecurity';
 
 export const CertificationsSection: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
@@ -174,7 +171,7 @@ export const CertificationsSection: React.FC = () => {
             className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            05 / OFFICIAL CERTIFICATES & CREDENTIALS ({certificatesList.length})
+            05 / OFFICIAL CERTIFICATES ({certificatesList.length})
           </span>
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
         </motion.div>
@@ -199,25 +196,12 @@ export const CertificationsSection: React.FC = () => {
             </span>
           </h2>
 
-          <div className="flex flex-col items-start space-y-3">
-            <p
-              className="text-xs sm:text-sm font-light text-[#A8988B] max-w-md leading-relaxed"
-              style={{ fontFamily: "'Montserrat', sans-serif" }}
-            >
-              Explore verified Google Cloud skill badges, LeetCode 100+ Days award certificate, Generative AI specializations, and uploaded LinkedIn credential documents.
-            </p>
-
-            <a
-              href={LINKEDIN_DOCS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-5 py-2.5 border border-[#D4AF37] bg-[#D4AF37]/15 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[11px] font-medium tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.2)]"
-              style={{ fontFamily: "'Montserrat', sans-serif" }}
-            >
-              <span>📄 VIEW ALL LINKEDIN CERTIFICATE DOCUMENTS</span>
-              <span className="text-xs">↗</span>
-            </a>
-          </div>
+          <p
+            className="text-xs sm:text-sm font-light text-[#A8988B] max-w-md leading-relaxed"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
+          >
+            Explore all {certificatesList.length} verified certificates, internship awards, and Google Cloud credentials with direct LinkedIn verification links.
+          </p>
         </motion.div>
 
         {/* Category Filter Tabs */}
@@ -225,16 +209,16 @@ export const CertificationsSection: React.FC = () => {
           {[
             { id: 'all', label: `ALL CERTIFICATES (${certificatesList.length})` },
             {
-              id: 'cloud-ai',
-              label: `GOOGLE CLOUD & AI (${certificatesList.filter((c) => c.category === 'cloud-ai').length})`,
+              id: 'ai-ml',
+              label: `AI & MACHINE LEARNING (${certificatesList.filter((c) => c.category === 'ai-ml').length})`,
             },
             {
-              id: 'algorithms',
-              label: `ALGORITHMS & CODING (${certificatesList.filter((c) => c.category === 'algorithms').length})`,
+              id: 'fullstack-backend',
+              label: `FULL STACK & BACKEND (${certificatesList.filter((c) => c.category === 'fullstack-backend').length})`,
             },
             {
-              id: 'fullstack',
-              label: `FULL STACK (${certificatesList.filter((c) => c.category === 'fullstack').length})`,
+              id: 'cybersecurity',
+              label: `CYBERSECURITY (${certificatesList.filter((c) => c.category === 'cybersecurity').length})`,
             },
           ].map((tab) => (
             <button
@@ -286,10 +270,10 @@ export const CertificationsSection: React.FC = () => {
                     </div>
                     <div>
                       <span className="block text-[10px] font-mono tracking-[0.2em] text-[#F7E7C4] uppercase font-semibold">
-                        VERIFIED DOCUMENT
+                        VERIFIED LINKEDIN CERTIFICATE
                       </span>
                       <span className="block text-[9px] font-mono text-[#A8988B]">
-                        ID: {cert.credentialId}
+                        {cert.issuer}
                       </span>
                     </div>
                   </div>
@@ -354,10 +338,10 @@ export const CertificationsSection: React.FC = () => {
                         href={cert.certificateUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 inline-flex items-center justify-center space-x-2 py-3 border border-[#8C6D4F]/50 bg-[#14100D] hover:border-[#D4AF37] text-[#EAD8C7] hover:text-white text-[10.5px] font-medium tracking-[0.18em] uppercase transition-all duration-300"
+                        className="flex-1 inline-flex items-center justify-center space-x-2 py-3 border border-[#8C6D4F]/50 bg-[#14100D] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#EAD8C7] hover:text-black text-[10.5px] font-medium tracking-[0.18em] uppercase transition-all duration-300"
                         style={{ fontFamily: "'Montserrat', sans-serif" }}
                       >
-                        <span>LINKEDIN DOCUMENT</span>
+                        <span>VIEW LINKEDIN POST</span>
                         <span className="text-xs">📄</span>
                       </a>
                     </div>
@@ -422,11 +406,11 @@ export const CertificationsSection: React.FC = () => {
                     <span className="text-[#F7E7C4] font-semibold">SHITAL PATIL</span>
                   </div>
                   <div className="flex items-center justify-between text-xs font-mono">
-                    <span className="text-[#8C6D4F]">CREDENTIAL ID:</span>
-                    <span className="text-[#F7E7C4] font-semibold">{selectedCert.credentialId}</span>
+                    <span className="text-[#8C6D4F]">ISSUING ORGANIZATION:</span>
+                    <span className="text-[#F7E7C4] font-semibold">{selectedCert.issuer}</span>
                   </div>
                   <div className="flex items-center justify-between text-xs font-mono">
-                    <span className="text-[#8C6D4F]">STATUS:</span>
+                    <span className="text-[#8C6D4F]">VERIFICATION STATUS:</span>
                     <span className="text-[#34A853] font-semibold">VERIFIED & ACTIVE ✓</span>
                   </div>
                 </div>
@@ -465,7 +449,7 @@ export const CertificationsSection: React.FC = () => {
                     className="flex-1 inline-flex items-center justify-center space-x-2 py-3.5 border border-[#D4AF37] bg-[#D4AF37] text-black text-xs font-medium tracking-[0.2em] uppercase transition-all hover:bg-[#F7E7C4]"
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
-                    <span>OPEN LINKEDIN DOCUMENT</span>
+                    <span>OPEN LINKEDIN POST</span>
                     <span className="text-xs">📄</span>
                   </a>
 
