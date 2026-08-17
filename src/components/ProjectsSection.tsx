@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import ScrollStack, { ScrollStackItem } from './ScrollStack';
 
 interface Project {
@@ -277,13 +277,13 @@ const allProjects: Project[] = [
 ];
 
 type FilterType = 'all' | 'ai-ml' | 'fullstack-backend' | 'web-mobile';
-type ViewMode = 'grid' | 'stack';
 
 export const ProjectsSection: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
-  const [viewMode, setViewMode] = useState<ViewMode>('grid');
 
-  const filteredProjects =
+  const topProjects = allProjects.slice(0, 4);
+
+  const gridProjects =
     activeFilter === 'all'
       ? allProjects
       : allProjects.filter((p) => p.filterGroup === activeFilter);
@@ -298,7 +298,7 @@ export const ProjectsSection: React.FC = () => {
       <div className="absolute bottom-1/3 right-1/4 w-[32rem] h-[32rem] bg-[#8C6D4F]/5 rounded-full blur-[170px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
-        {/* Eyebrow Header */}
+        {/* ================= PART 1: TOP 4 FEATURED STACK DECK ================= */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -310,7 +310,7 @@ export const ProjectsSection: React.FC = () => {
             className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            02 / SELECTED WORK ({allProjects.length} PROJECTS)
+            02 / FEATURED FLAGSHIP PROJECTS (TOP 4)
           </span>
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
         </motion.div>
@@ -321,7 +321,7 @@ export const ProjectsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6"
+          className="mb-8"
         >
           <h2
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight uppercase leading-[0.85] select-none"
@@ -334,47 +334,132 @@ export const ProjectsSection: React.FC = () => {
               PROTOTYPES &amp; SYSTEMS.
             </span>
           </h2>
+        </motion.div>
 
-          {/* View Switcher Controls */}
-          <div className="relative inline-flex items-center bg-[#0C0A08] p-1.5 rounded-full border border-[#8C6D4F]/40 shadow-[0_4px_25px_rgba(0,0,0,0.85)] self-start lg:self-auto">
-            <button
-              onClick={() => setViewMode('grid')}
-              className={`relative z-10 px-5 py-2.5 text-[10.5px] font-mono tracking-[0.2em] uppercase transition-colors duration-300 flex items-center space-x-2 rounded-full ${
-                viewMode === 'grid' ? 'text-black font-semibold' : 'text-[#A8988B] hover:text-white'
-              }`}
-            >
-              {viewMode === 'grid' && (
-                <motion.div
-                  layoutId="activeViewPill"
-                  className="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#F7E7C4] to-[#C99E5D] rounded-full shadow-[0_0_20px_rgba(212,175,55,0.45)] z-[-1]"
-                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                />
-              )}
-              <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M1 2.5A1.5 1.5 0 012.5 1h3A1.5 1.5 0 017 2.5v3A1.5 1.5 0 015.5 7h-3A1.5 1.5 0 011 5.5v-3zM9 2.5A1.5 1.5 0 0110.5 1h3A1.5 1.5 0 0115 2.5v3A1.5 1.5 0 0113.5 7h-3A1.5 1.5 0 019 5.5v-3zM1 10.5A1.5 1.5 0 012.5 9h3A1.5 1.5 0 017 10.5v3A1.5 1.5 0 015.5 15h-3A1.5 1.5 0 011 13.5v-3zM9 10.5A1.5 1.5 0 0110.5 9h3a1.5 1.5 0 011.5 1.5v3a1.5 1.5 0 01-1.5 1.5h-3A1.5 1.5 0 019 13.5v-3z"/>
-              </svg>
-              <span>GRID VIEW ({filteredProjects.length})</span>
-            </button>
+        {/* Permanent 3D Stack Deck for Top 4 Projects */}
+        <div className="w-full mb-28">
+          <ScrollStack className="py-6" itemDistance={60}>
+            {topProjects.map((project) => (
+              <ScrollStackItem key={project.id}>
+                <div className="relative w-full p-8 sm:p-12 bg-[#0C0A08] border border-[#8C6D4F]/40 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.9)] overflow-hidden group">
+                  {/* Top Gold Horizon Edge */}
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
 
-            <button
-              onClick={() => setViewMode('stack')}
-              className={`relative z-10 px-5 py-2.5 text-[10.5px] font-mono tracking-[0.2em] uppercase transition-colors duration-300 flex items-center space-x-2 rounded-full ${
-                viewMode === 'stack' ? 'text-black font-semibold' : 'text-[#A8988B] hover:text-white'
-              }`}
-            >
-              {viewMode === 'stack' && (
-                <motion.div
-                  layoutId="activeViewPill"
-                  className="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#F7E7C4] to-[#C99E5D] rounded-full shadow-[0_0_20px_rgba(212,175,55,0.45)] z-[-1]"
-                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                />
-              )}
-              <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M2.5 3A1.5 1.5 0 001 4.5v7A1.5 1.5 0 002.5 13h11a1.5 1.5 0 001.5-1.5v-7A1.5 1.5 0 0013.5 3h-11zM14 4.5v7a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-7a.5.5 0 01.5-.5h11a.5.5 0 01.5.5z"/>
-              </svg>
-              <span>STACK DECK (TOP 4)</span>
-            </button>
-          </div>
+                  {/* Corner Accents */}
+                  <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]" />
+                  <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]" />
+
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    {/* Left Info */}
+                    <div className="lg:col-span-7 flex flex-col justify-between h-full">
+                      <div>
+                        <div className="flex items-center space-x-3 mb-4">
+                          <span className="text-xs font-mono tracking-[0.25em] text-[#D4AF37]">
+                            FLAGSHIP // {project.number}
+                          </span>
+                          <span
+                            className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] bg-[#14100D] px-3 py-1 rounded border border-[#8C6D4F]/30"
+                            style={{ fontFamily: "'Montserrat', sans-serif" }}
+                          >
+                            {project.category}
+                          </span>
+                        </div>
+
+                        <h3
+                          className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white mb-4 uppercase leading-[0.9]"
+                          style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                        >
+                          {project.title}
+                        </h3>
+
+                        <p
+                          className="text-xs sm:text-sm text-[#BDB0A4] font-light leading-relaxed mb-8 max-w-xl"
+                          style={{ fontFamily: "'Montserrat', sans-serif" }}
+                        >
+                          {project.description}
+                        </p>
+                      </div>
+
+                      <div>
+                        <div className="flex flex-wrap gap-2 mb-8">
+                          {project.tech.map((t) => (
+                            <span
+                              key={t}
+                              className="px-3 py-1 text-[10px] font-medium tracking-[0.15em] uppercase rounded-sm border border-[#8C6D4F]/40 bg-[#14100D] text-[#E8D7C5]"
+                              style={{ fontFamily: "'Montserrat', sans-serif" }}
+                            >
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+
+                        <div className="flex items-center space-x-4">
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-6 py-3 border border-[#8C6D4F] bg-[#14100D] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-white hover:text-black text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                            style={{ fontFamily: "'Montserrat', sans-serif" }}
+                          >
+                            VIEW SOURCE CODE ↗
+                          </a>
+                          {project.liveUrl && (
+                            <a
+                              href={project.liveUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-6 py-3 border border-[#D4AF37] bg-[#D4AF37]/20 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                              style={{ fontFamily: "'Montserrat', sans-serif" }}
+                            >
+                              OPEN LIVE DEMO ⚡
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Right Metrics Box */}
+                    <div className="lg:col-span-5 bg-[#050403] p-6 rounded-xl border border-[#8C6D4F]/30 space-y-4">
+                      <span
+                        className="block text-[10px] font-mono tracking-[0.3em] uppercase text-[#D4AF37] pb-3 border-b border-[#8C6D4F]/20"
+                        style={{ fontFamily: "'Montserrat', sans-serif" }}
+                      >
+                        SYSTEM METRICS &amp; SPECS
+                      </span>
+
+                      {project.metrics.map((m) => (
+                        <div key={m.label} className="space-y-1">
+                          <span className="block text-[9.5px] font-mono text-[#8C6D4F]">
+                            {m.label}
+                          </span>
+                          <span className="block text-sm font-semibold text-[#F7E7C4]">
+                            {m.value}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </ScrollStackItem>
+            ))}
+          </ScrollStack>
+        </div>
+
+        {/* ================= PART 2: PERMANENT GRID VIEW FOR ALL REPOSITORIES ================= */}
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex items-center space-x-4 mb-5 pt-12 border-t border-[#8C6D4F]/20"
+        >
+          <span
+            className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
+          >
+            03 / ALL ENGINEERING REPOSITORIES ({allProjects.length})
+          </span>
+          <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
         </motion.div>
 
         {/* Category Filter Tabs */}
@@ -409,227 +494,96 @@ export const ProjectsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* View Mode Render */}
-        <AnimatePresence mode="wait">
-          {viewMode === 'grid' ? (
-            /* ================= GRID VIEW ================= */
+        {/* Permanent Grid View */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          {gridProjects.map((project, idx) => (
             <motion.div
-              key="grid"
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
-              transition={{ duration: 0.4 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.05 }}
+              className="relative flex flex-col justify-between p-7 bg-[#0A0806] border border-[#8C6D4F]/30 hover:border-[#D4AF37] rounded-xl transition-all duration-300 group overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.85)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)]"
             >
-              {filteredProjects.map((project, idx) => (
-                <motion.div
-                  key={project.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: idx * 0.05 }}
-                  className="relative flex flex-col justify-between p-7 bg-[#0A0806] border border-[#8C6D4F]/30 hover:border-[#D4AF37] rounded-xl transition-all duration-300 group overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.85)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)]"
+              {/* Top Border Flare */}
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/70 to-transparent" />
+
+              {/* Corner Minimal L-Brackets */}
+              <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#D4AF37]/50 group-hover:border-[#D4AF37] transition-colors" />
+              <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#D4AF37]/50 group-hover:border-[#D4AF37] transition-colors" />
+
+              <div>
+                {/* Header Row */}
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-[10px] font-mono tracking-[0.25em] text-[#D4AF37]">
+                    PROJ // {project.number}
+                  </span>
+                  <span
+                    className="text-[9.5px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] bg-[#120F0C] px-2.5 py-1 rounded border border-[#8C6D4F]/20"
+                    style={{ fontFamily: "'Montserrat', sans-serif" }}
+                  >
+                    {project.category}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3
+                  className="text-2xl sm:text-3xl font-normal tracking-tight text-[#F4EBE2] mb-3 group-hover:text-white transition-colors uppercase leading-[0.95]"
+                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                 >
-                  {/* Top Border Flare */}
-                  <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/70 to-transparent" />
+                  {project.title}
+                </h3>
 
-                  {/* Corner Minimal L-Brackets */}
-                  <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#D4AF37]/50 group-hover:border-[#D4AF37] transition-colors" />
-                  <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#D4AF37]/50 group-hover:border-[#D4AF37] transition-colors" />
+                {/* Description */}
+                <p
+                  className="text-xs text-[#BDB0A4] font-light leading-[1.8] mb-6 tracking-wide"
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
+                >
+                  {project.description}
+                </p>
+              </div>
 
-                  <div>
-                    {/* Header Row */}
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-[10px] font-mono tracking-[0.25em] text-[#D4AF37]">
-                        PROJ // {project.number}
-                      </span>
-                      <span
-                        className="text-[9.5px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] bg-[#120F0C] px-2.5 py-1 rounded border border-[#8C6D4F]/20"
-                        style={{ fontFamily: "'Montserrat', sans-serif" }}
-                      >
-                        {project.category}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h3
-                      className="text-2xl sm:text-3xl font-normal tracking-tight text-[#F4EBE2] mb-3 group-hover:text-white transition-colors uppercase leading-[0.95]"
-                      style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                    >
-                      {project.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p
-                      className="text-xs text-[#BDB0A4] font-light leading-[1.8] mb-6 tracking-wide"
+              <div>
+                {/* Tech Pills */}
+                <div className="flex flex-wrap gap-1.5 mb-6 pt-4 border-t border-[#8C6D4F]/20">
+                  {project.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="px-2 py-0.5 text-[9px] font-medium tracking-[0.14em] uppercase rounded-sm border border-[#8C6D4F]/30 bg-[#120F0C] text-[#E8D7C5] group-hover:border-[#D4AF37]/40 transition-colors"
                       style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
-                      {project.description}
-                    </p>
-                  </div>
+                      {t}
+                    </span>
+                  ))}
+                </div>
 
-                  <div>
-                    {/* Tech Pills */}
-                    <div className="flex flex-wrap gap-1.5 mb-6 pt-4 border-t border-[#8C6D4F]/20">
-                      {project.tech.map((t) => (
-                        <span
-                          key={t}
-                          className="px-2 py-0.5 text-[9px] font-medium tracking-[0.14em] uppercase rounded-sm border border-[#8C6D4F]/30 bg-[#120F0C] text-[#E8D7C5] group-hover:border-[#D4AF37]/40 transition-colors"
-                          style={{ fontFamily: "'Montserrat', sans-serif" }}
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="flex items-center space-x-3">
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 py-2.5 text-center border border-[#8C6D4F]/40 bg-[#120F0C] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#E8DFD8] hover:text-black text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
-                        style={{ fontFamily: "'Montserrat', sans-serif" }}
-                      >
-                        GITHUB REPO ↗
-                      </a>
-                      {project.liveUrl && (
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-1 py-2.5 text-center border border-[#D4AF37] bg-[#D4AF37]/15 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
-                          style={{ fontFamily: "'Montserrat', sans-serif" }}
-                        >
-                          LIVE DEMO ⚡
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                {/* Action Buttons */}
+                <div className="flex items-center space-x-3">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-2.5 text-center border border-[#8C6D4F]/40 bg-[#120F0C] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#E8DFD8] hover:text-black text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                    style={{ fontFamily: "'Montserrat', sans-serif" }}
+                  >
+                    GITHUB REPO ↗
+                  </a>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 py-2.5 text-center border border-[#D4AF37] bg-[#D4AF37]/15 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                      style={{ fontFamily: "'Montserrat', sans-serif" }}
+                    >
+                      LIVE DEMO ⚡
+                    </a>
+                  )}
+                </div>
+              </div>
             </motion.div>
-          ) : (
-            /* ================= STACK DECK VIEW ================= */
-            <motion.div
-              key="stack"
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.98 }}
-              transition={{ duration: 0.4 }}
-              className="w-full"
-            >
-              <ScrollStack
-                className="py-10"
-                itemDistance={60}
-              >
-                {filteredProjects.slice(0, 4).map((project) => (
-                  <ScrollStackItem key={project.id}>
-                    <div className="relative w-full p-8 sm:p-12 bg-[#0C0A08] border border-[#8C6D4F]/40 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.9)] overflow-hidden group">
-                      {/* Top Gold Horizon Edge */}
-                      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
-
-                      {/* Corner Accents */}
-                      <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]" />
-                      <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]" />
-
-                      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                        {/* Left Info */}
-                        <div className="lg:col-span-7 flex flex-col justify-between h-full">
-                          <div>
-                            <div className="flex items-center space-x-3 mb-4">
-                              <span className="text-xs font-mono tracking-[0.25em] text-[#D4AF37]">
-                                PROJ // {project.number}
-                              </span>
-                              <span
-                                className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] bg-[#14100D] px-3 py-1 rounded border border-[#8C6D4F]/30"
-                                style={{ fontFamily: "'Montserrat', sans-serif" }}
-                              >
-                                {project.category}
-                              </span>
-                            </div>
-
-                            <h3
-                              className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white mb-4 uppercase leading-[0.9]"
-                              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                            >
-                              {project.title}
-                            </h3>
-
-                            <p
-                              className="text-xs sm:text-sm text-[#BDB0A4] font-light leading-relaxed mb-8 max-w-xl"
-                              style={{ fontFamily: "'Montserrat', sans-serif" }}
-                            >
-                              {project.description}
-                            </p>
-                          </div>
-
-                          <div>
-                            <div className="flex flex-wrap gap-2 mb-8">
-                              {project.tech.map((t) => (
-                                <span
-                                  key={t}
-                                  className="px-3 py-1 text-[10px] font-medium tracking-[0.15em] uppercase rounded-sm border border-[#8C6D4F]/40 bg-[#14100D] text-[#E8D7C5]"
-                                  style={{ fontFamily: "'Montserrat', sans-serif" }}
-                                >
-                                  {t}
-                                </span>
-                              ))}
-                            </div>
-
-                            <div className="flex items-center space-x-4">
-                              <a
-                                href={project.githubUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-6 py-3 border border-[#8C6D4F] bg-[#14100D] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-white hover:text-black text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300"
-                                style={{ fontFamily: "'Montserrat', sans-serif" }}
-                              >
-                                VIEW SOURCE CODE ↗
-                              </a>
-                              {project.liveUrl && (
-                                <a
-                                  href={project.liveUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="px-6 py-3 border border-[#D4AF37] bg-[#D4AF37]/20 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300"
-                                  style={{ fontFamily: "'Montserrat', sans-serif" }}
-                                >
-                                  OPEN LIVE DEMO ⚡
-                                </a>
-                              )}
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Right Metrics Box */}
-                        <div className="lg:col-span-5 bg-[#050403] p-6 rounded-xl border border-[#8C6D4F]/30 space-y-4">
-                          <span
-                            className="block text-[10px] font-mono tracking-[0.3em] uppercase text-[#D4AF37] pb-3 border-b border-[#8C6D4F]/20"
-                            style={{ fontFamily: "'Montserrat', sans-serif" }}
-                          >
-                            SYSTEM METRICS &amp; SPECS
-                          </span>
-
-                          {project.metrics.map((m) => (
-                            <div key={m.label} className="space-y-1">
-                              <span className="block text-[9.5px] font-mono text-[#8C6D4F]">
-                                {m.label}
-                              </span>
-                              <span className="block text-sm font-semibold text-[#F7E7C4]">
-                                {m.value}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </ScrollStackItem>
-                ))}
-              </ScrollStack>
-            </motion.div>
-          )}
-        </AnimatePresence>
+          ))}
+        </div>
       </div>
     </section>
   );

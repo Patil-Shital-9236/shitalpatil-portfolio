@@ -43,17 +43,17 @@ const journey: RouteStop[] = [
   },
   {
     id: '03',
-    year: '2023 - 2026',
-    title: 'B.TECH IN COMPUTER SCIENCE (AIML)',
-    organization: 'KIT’S COLLEGE OF ENGINEERING, KOLHAPUR',
-    description: 'Focused on AI, Machine Learning, and core computer science fundamentals. (C.G.P.A : 9.07)',
-  },
-  {
-    id: '04',
     year: '2020 - 2023',
     title: 'DIPLOMA IN COMPUTER SCIENCE & ENG.',
     organization: 'YASHWANTRAO POLYTECHNIC, ICHALKARANJI',
     description: 'Built a strong foundation in programming, database management, and system design. (88.11%)',
+  },
+  {
+    id: '04',
+    year: '2023 - 2026',
+    title: 'B.TECH IN COMPUTER SCIENCE (AIML)',
+    organization: 'KIT’S COLLEGE OF ENGINEERING, KOLHAPUR',
+    description: 'Focused on AI, Machine Learning, and core computer science fundamentals. (C.G.P.A : 9.07)',
   },
 ];
 
