@@ -41,8 +41,7 @@ const allProjects: Project[] = [
     filterGroup: 'web-mobile',
     description:
       'Solved the problem of managing health-product shopping and customer guidance in one place, helping customers choose green tea and sprouts based on health and nutrition goals. Built 6+ modules for products, users, voice search, fitness guidance, payments, and admin management. Integrated Groq API + Google Speech-to-Text for multilingual AI assistance and voice ordering, with 4 payment options for easier customer checkout.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/FitShop-AI',
-    liveUrl: 'https://github.com/Patil-Shital-9236/FitShop-AI',
+    githubUrl: 'https://github.com/Patil-Shital-9236',
     tech: ['Flutter', 'Dart', 'PHP', 'MySQL', 'Groq API', 'Google Speech-to-Text'],
     metrics: [
       { label: 'AI VOICE', value: 'Google Speech-to-Text' },
@@ -58,8 +57,7 @@ const allProjects: Project[] = [
     filterGroup: 'ai-ml',
     description:
       'Solved the problem of creating images manually from scratch by allowing users to generate images directly from text prompts. Built the application with React.js + Flask, connecting the frontend with the AI image-generation backend. Used Stable Diffusion, caching, and Docker to generate images, avoid repeated requests, and simplify backend deployment.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/Text-to-Image-Generator',
-    liveUrl: 'https://github.com/Patil-Shital-9236/Text-to-Image-Generator',
+    githubUrl: 'https://github.com/Patil-Shital-9236',
     tech: ['React.js', 'Flask', 'Stable Diffusion', 'Docker', 'Python', 'REST APIs'],
     metrics: [
       { label: 'AI MODEL', value: 'Stable Diffusion' },
