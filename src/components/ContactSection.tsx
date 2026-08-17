@@ -90,7 +90,7 @@ export const ContactSection: React.FC = () => {
                   <span>+91 80109 29285</span>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/shital-patil-365759237/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center space-x-3 text-xs sm:text-[13px] text-[#D4AF37] hover:text-white transition-colors" 
