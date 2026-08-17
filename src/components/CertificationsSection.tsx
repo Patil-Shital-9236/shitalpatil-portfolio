@@ -16,6 +16,8 @@ interface Certificate {
   certificateUrl: string;
 }
 
+const LINKEDIN_DOCS_URL = 'https://www.linkedin.com/in/shital-patil-365759237/recent-activity/documents/';
+
 const certificatesList: Certificate[] = [
   {
     id: 'google-devops',
@@ -30,7 +32,7 @@ const certificatesList: Certificate[] = [
     description:
       'Official Google Cloud Skill Badge demonstrating proficiency in AI-assisted software delivery pipelines, cloud infrastructure automation, intelligent log analysis, and automated CI/CD workflows using Gemini AI on Google Cloud Platform.',
     skills: ['Google Cloud', 'Gemini AI', 'DevOps Automation', 'CI/CD Pipelines', 'Cloud Architecture'],
-    certificateUrl: 'https://www.linkedin.com/in/shital-patil-365759237/',
+    certificateUrl: LINKEDIN_DOCS_URL,
   },
   {
     id: 'google-security',
@@ -45,7 +47,7 @@ const certificatesList: Certificate[] = [
     description:
       'Verified Google Cloud specialization in AI-driven security operations, threat detection intelligence, IAM posture management, and automated security policy synthesis.',
     skills: ['Cloud Security', 'Gemini Security', 'Threat Detection', 'IAM Policy', 'Security Operations'],
-    certificateUrl: 'https://www.linkedin.com/in/shital-patil-365759237/',
+    certificateUrl: LINKEDIN_DOCS_URL,
   },
   {
     id: 'google-genai-leader',
@@ -60,7 +62,7 @@ const certificatesList: Certificate[] = [
     description:
       'Comprehensive Google certification certifying mastery of Large Language Model (LLM) architectures, prompt engineering strategies, Gemini API integrations, and enterprise AI transformation.',
     skills: ['Generative AI', 'LLM Architecture', 'Gemini API', 'Prompt Engineering', 'Enterprise AI'],
-    certificateUrl: 'https://www.linkedin.com/in/shital-patil-365759237/',
+    certificateUrl: LINKEDIN_DOCS_URL,
   },
   {
     id: 'google-responsible-ai',
@@ -75,7 +77,7 @@ const certificatesList: Certificate[] = [
     description:
       'Official Google accreditation in implementing Responsible AI frameworks, model fairness auditing, bias mitigation, safety benchmarks, and ethical AI deployment principles.',
     skills: ['Responsible AI', 'AI Ethics', 'Bias Mitigation', 'Safety Evaluation', 'Governance'],
-    certificateUrl: 'https://www.linkedin.com/in/shital-patil-365759237/',
+    certificateUrl: LINKEDIN_DOCS_URL,
   },
   {
     id: 'leetcode-100-days',
@@ -90,7 +92,7 @@ const certificatesList: Certificate[] = [
     description:
       'Recognized problem-solving award for completing over 110+ Data Structures & Algorithms challenges (Arrays, Hash Maps, Dynamic Programming, Trees, Graphs, System Design) with consistent daily practice.',
     skills: ['Data Structures', 'Algorithms', 'Dynamic Programming', 'Problem Solving', 'System Design'],
-    certificateUrl: 'https://www.linkedin.com/in/shital-patil-365759237/',
+    certificateUrl: LINKEDIN_DOCS_URL,
   },
   {
     id: 'genai-streamlit',
@@ -105,7 +107,7 @@ const certificatesList: Certificate[] = [
     description:
       'Practical engineering certificate verifying ability to build and deploy end-to-end Generative AI applications leveraging Google Gemini API, vector database retrieval, and Streamlit web interfaces.',
     skills: ['Python', 'Streamlit', 'Gemini API', 'Vector Search', 'Full Stack AI'],
-    certificateUrl: 'https://www.linkedin.com/in/shital-patil-365759237/',
+    certificateUrl: LINKEDIN_DOCS_URL,
   },
   {
     id: 'prompt-engineering',
@@ -120,7 +122,7 @@ const certificatesList: Certificate[] = [
     description:
       'Advanced prompt engineering certificate covering Few-Shot Prompting, Chain-of-Thought (CoT) reasoning, System Role Instructions, LLM parameter tuning, and output formatting.',
     skills: ['Prompt Engineering', 'Chain-of-Thought', 'System Roles', 'LLM Tuning', 'AI Inference'],
-    certificateUrl: 'https://www.linkedin.com/in/shital-patil-365759237/',
+    certificateUrl: LINKEDIN_DOCS_URL,
   },
   {
     id: 'fullstack-web-cert',
@@ -135,7 +137,7 @@ const certificatesList: Certificate[] = [
     description:
       'Comprehensive engineering certificate covering asynchronous RESTful API design, Node.js Express server architectures, PostgreSQL/MongoDB database integration, and React frontend systems.',
     skills: ['Node.js', 'Express.js', 'React.js', 'REST APIs', 'MongoDB', 'SQL'],
-    certificateUrl: 'https://www.linkedin.com/in/shital-patil-365759237/',
+    certificateUrl: LINKEDIN_DOCS_URL,
   },
 ];
 
@@ -183,7 +185,7 @@ export const CertificationsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
+          className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6"
         >
           <h2
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight uppercase leading-[0.85] select-none"
@@ -197,12 +199,25 @@ export const CertificationsSection: React.FC = () => {
             </span>
           </h2>
 
-          <p
-            className="text-xs sm:text-sm font-light text-[#A8988B] max-w-md leading-relaxed"
-            style={{ fontFamily: "'Montserrat', sans-serif" }}
-          >
-            Verified Google Cloud skill badges, LeetCode 100+ Days award certificate, Generative AI specializations, and full-stack software credentials.
-          </p>
+          <div className="flex flex-col items-start space-y-3">
+            <p
+              className="text-xs sm:text-sm font-light text-[#A8988B] max-w-md leading-relaxed"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
+            >
+              Explore verified Google Cloud skill badges, LeetCode 100+ Days award certificate, Generative AI specializations, and uploaded LinkedIn credential documents.
+            </p>
+
+            <a
+              href={LINKEDIN_DOCS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 px-5 py-2.5 border border-[#D4AF37] bg-[#D4AF37]/15 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[11px] font-medium tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.2)]"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
+            >
+              <span>📄 VIEW ALL LINKEDIN CERTIFICATE DOCUMENTS</span>
+              <span className="text-xs">↗</span>
+            </a>
+          </div>
         </motion.div>
 
         {/* Category Filter Tabs */}
@@ -271,7 +286,7 @@ export const CertificationsSection: React.FC = () => {
                     </div>
                     <div>
                       <span className="block text-[10px] font-mono tracking-[0.2em] text-[#F7E7C4] uppercase font-semibold">
-                        VERIFIED CREDENTIAL
+                        VERIFIED DOCUMENT
                       </span>
                       <span className="block text-[9px] font-mono text-[#A8988B]">
                         ID: {cert.credentialId}
@@ -331,7 +346,7 @@ export const CertificationsSection: React.FC = () => {
                         className="flex-1 inline-flex items-center justify-center space-x-2 py-3 border border-[#D4AF37]/60 bg-[#D4AF37]/10 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[10.5px] font-medium tracking-[0.18em] uppercase transition-all duration-300"
                         style={{ fontFamily: "'Montserrat', sans-serif" }}
                       >
-                        <span>VIEW CERTIFICATE</span>
+                        <span>VIEW DETAILS</span>
                         <span className="text-xs">🔍</span>
                       </button>
 
@@ -342,8 +357,8 @@ export const CertificationsSection: React.FC = () => {
                         className="flex-1 inline-flex items-center justify-center space-x-2 py-3 border border-[#8C6D4F]/50 bg-[#14100D] hover:border-[#D4AF37] text-[#EAD8C7] hover:text-white text-[10.5px] font-medium tracking-[0.18em] uppercase transition-all duration-300"
                         style={{ fontFamily: "'Montserrat', sans-serif" }}
                       >
-                        <span>LINKEDIN VERIFY</span>
-                        <span className="text-xs">↗</span>
+                        <span>LINKEDIN DOCUMENT</span>
+                        <span className="text-xs">📄</span>
                       </a>
                     </div>
                   </div>
@@ -387,7 +402,7 @@ export const CertificationsSection: React.FC = () => {
                     📜
                   </div>
                   <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-[#D4AF37]">
-                    OFFICIAL CERTIFICATE OF COMPLETION
+                    OFFICIAL CERTIFICATE DOCUMENT
                   </span>
                   <h3
                     className="text-3xl sm:text-4xl text-white font-normal uppercase leading-tight mt-1"
@@ -450,8 +465,8 @@ export const CertificationsSection: React.FC = () => {
                     className="flex-1 inline-flex items-center justify-center space-x-2 py-3.5 border border-[#D4AF37] bg-[#D4AF37] text-black text-xs font-medium tracking-[0.2em] uppercase transition-all hover:bg-[#F7E7C4]"
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
-                    <span>VERIFY ON LINKEDIN</span>
-                    <span className="text-xs">↗</span>
+                    <span>OPEN LINKEDIN DOCUMENT</span>
+                    <span className="text-xs">📄</span>
                   </a>
 
                   <button
