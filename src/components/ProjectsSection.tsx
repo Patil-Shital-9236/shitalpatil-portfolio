@@ -407,7 +407,7 @@ export const ProjectsSection: React.FC = () => {
                           ))}
                         </div>
 
-                        <div className="flex items-center space-x-4">
+                        <div className="flex flex-wrap items-center gap-3">
                           <a
                             href={project.githubUrl}
                             target="_blank"
@@ -428,6 +428,13 @@ export const ProjectsSection: React.FC = () => {
                               OPEN LIVE DEMO ⚡
                             </a>
                           )}
+                          <button
+                            onClick={handleToggleGrid}
+                            className="px-6 py-3 border border-[#D4AF37] bg-[#D4AF37]/10 hover:bg-[#D4AF37] text-[#D4AF37] hover:text-black text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer"
+                            style={{ fontFamily: "'Montserrat', sans-serif" }}
+                          >
+                            {isGridExpanded ? 'HIDE GRID ↑' : 'SEE ALL 16 PROJECTS ↓'}
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -465,7 +472,7 @@ export const ProjectsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="flex flex-col sm:flex-row items-center justify-between p-6 sm:p-8 rounded-xl bg-gradient-to-r from-[#14100D] via-[#1F1914] to-[#14100D] border border-[#8C6D4F]/50 shadow-[0_15px_40px_rgba(0,0,0,0.85)] mb-10 group"
+          className="relative z-10 flex flex-col sm:flex-row items-center justify-between p-6 sm:p-8 rounded-xl bg-gradient-to-r from-[#14100D] via-[#1F1914] to-[#14100D] border border-[#8C6D4F]/50 shadow-[0_15px_40px_rgba(0,0,0,0.85)] mt-8 mb-16 group"
         >
           <div className="mb-5 sm:mb-0">
             <span className="text-[10px] font-mono tracking-[0.25em] text-[#D4AF37] uppercase block mb-1">
