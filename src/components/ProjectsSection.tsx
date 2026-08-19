@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import ScrollStack, { ScrollStackItem } from './ScrollStack';
 
 interface Project {
@@ -280,6 +280,7 @@ type FilterType = 'all' | 'ai-ml' | 'fullstack-backend' | 'web-mobile';
 
 export const ProjectsSection: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
+  const [isGridExpanded, setIsGridExpanded] = useState<boolean>(false);
 
   const topProjects = allProjects.slice(0, 4);
 
@@ -287,6 +288,19 @@ export const ProjectsSection: React.FC = () => {
     activeFilter === 'all'
       ? allProjects
       : allProjects.filter((p) => p.filterGroup === activeFilter);
+
+  const handleToggleGrid = () => {
+    const nextState = !isGridExpanded;
+    setIsGridExpanded(nextState);
+    if (nextState) {
+      setTimeout(() => {
+        const element = document.getElementById('all-projects-grid');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150);
+    }
+  };
 
   return (
     <section
@@ -451,7 +465,7 @@ export const ProjectsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="flex flex-col sm:flex-row items-center justify-between p-6 sm:p-8 rounded-xl bg-gradient-to-r from-[#14100D] via-[#1F1914] to-[#14100D] border border-[#8C6D4F]/50 shadow-[0_15px_40px_rgba(0,0,0,0.85)] mb-20 group"
+          className="flex flex-col sm:flex-row items-center justify-between p-6 sm:p-8 rounded-xl bg-gradient-to-r from-[#14100D] via-[#1F1914] to-[#14100D] border border-[#8C6D4F]/50 shadow-[0_15px_40px_rgba(0,0,0,0.85)] mb-10 group"
         >
           <div className="mb-5 sm:mb-0">
             <span className="text-[10px] font-mono tracking-[0.25em] text-[#D4AF37] uppercase block mb-1">
@@ -462,161 +476,165 @@ export const ProjectsSection: React.FC = () => {
             </h4>
           </div>
           <button
-            onClick={() => {
-              const element = document.getElementById('all-projects-grid');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            onClick={handleToggleGrid}
             className="w-full sm:w-auto px-8 py-3.5 bg-[#D4AF37] hover:bg-[#F7E7C4] text-black font-medium text-xs tracking-[0.22em] uppercase rounded-sm transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.35)] flex items-center justify-center space-x-3 shrink-0 cursor-pointer"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            <span>SEE ALL PROJECTS ({allProjects.length})</span>
-            <span className="text-sm font-bold">↓</span>
+            <span>{isGridExpanded ? 'HIDE PROJECTS GRID' : `SEE ALL PROJECTS (${allProjects.length})`}</span>
+            <span className="text-sm font-bold">{isGridExpanded ? '↑' : '↓'}</span>
           </button>
         </motion.div>
 
-        {/* ================= PART 2: PERMANENT GRID VIEW FOR ALL REPOSITORIES ================= */}
-        <div id="all-projects-grid" className="scroll-mt-24">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex items-center space-x-4 mb-5 pt-12 border-t border-[#8C6D4F]/20"
-          >
-            <span
-              className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
-              style={{ fontFamily: "'Montserrat', sans-serif" }}
+        {/* ================= PART 2: COLLAPSIBLE GRID VIEW FOR ALL REPOSITORIES ================= */}
+        <AnimatePresence>
+          {isGridExpanded && (
+            <motion.div
+              id="all-projects-grid"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 30 }}
+              transition={{ duration: 0.4 }}
+              className="scroll-mt-24 pt-4"
             >
-              ALL ENGINEERING REPOSITORIES GRID ({allProjects.length})
-            </span>
-            <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
-          </motion.div>
-
-          {/* Category Filter Tabs */}
-          <div className="flex flex-wrap items-center gap-2.5 mb-12 border-b border-[#8C6D4F]/25 pb-6">
-            {[
-              { id: 'all', label: `ALL PROJECTS (${allProjects.length})` },
-              {
-                id: 'ai-ml',
-                label: `AI & ML (${allProjects.filter((p) => p.filterGroup === 'ai-ml').length})`,
-              },
-              {
-                id: 'fullstack-backend',
-                label: `BACKEND & APIs (${allProjects.filter((p) => p.filterGroup === 'fullstack-backend').length})`,
-              },
-              {
-                id: 'web-mobile',
-                label: `WEB & APPS (${allProjects.filter((p) => p.filterGroup === 'web-mobile').length})`,
-              },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveFilter(tab.id as FilterType)}
-                className={`px-4 py-2 text-[10px] sm:text-[10.5px] font-medium tracking-[0.18em] uppercase rounded-sm transition-all duration-300 cursor-pointer ${
-                  activeFilter === tab.id
-                    ? 'bg-[#D4AF37] text-black shadow-[0_0_18px_rgba(212,175,55,0.35)]'
-                    : 'bg-[#120F0C] text-[#BDB0A4] border border-[#8C6D4F]/30 hover:border-[#D4AF37]/60 hover:text-white'
-                }`}
-                style={{ fontFamily: "'Montserrat', sans-serif" }}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Permanent Grid View */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-            {gridProjects.map((project, idx) => (
               <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.05 }}
-                className="relative flex flex-col justify-between p-7 bg-[#0A0806] border border-[#8C6D4F]/30 hover:border-[#D4AF37] rounded-xl transition-all duration-300 group overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.85)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)]"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex items-center space-x-4 mb-5 pt-8 border-t border-[#8C6D4F]/20"
               >
-                {/* Top Border Flare */}
-                <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/70 to-transparent" />
+                <span
+                  className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
+                >
+                  ALL ENGINEERING REPOSITORIES GRID ({allProjects.length})
+                </span>
+                <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
+              </motion.div>
 
-                {/* Corner Minimal L-Brackets */}
-                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#D4AF37]/50 group-hover:border-[#D4AF37] transition-colors" />
-                <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#D4AF37]/50 group-hover:border-[#D4AF37] transition-colors" />
-
-                <div>
-                  {/* Header Row */}
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-[10px] font-mono tracking-[0.25em] text-[#D4AF37]">
-                      PROJ // {project.number}
-                    </span>
-                    <span
-                      className="text-[9.5px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] bg-[#120F0C] px-2.5 py-1 rounded border border-[#8C6D4F]/20"
-                      style={{ fontFamily: "'Montserrat', sans-serif" }}
-                    >
-                      {project.category}
-                    </span>
-                  </div>
-
-                  {/* Title */}
-                  <h3
-                    className="text-2xl sm:text-3xl font-normal tracking-tight text-[#F4EBE2] mb-3 group-hover:text-white transition-colors uppercase leading-[0.95]"
-                    style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                  >
-                    {project.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p
-                    className="text-xs text-[#BDB0A4] font-light leading-[1.8] mb-6 tracking-wide"
+              {/* Category Filter Tabs */}
+              <div className="flex flex-wrap items-center gap-2.5 mb-12 border-b border-[#8C6D4F]/25 pb-6">
+                {[
+                  { id: 'all', label: `ALL PROJECTS (${allProjects.length})` },
+                  {
+                    id: 'ai-ml',
+                    label: `AI & ML (${allProjects.filter((p) => p.filterGroup === 'ai-ml').length})`,
+                  },
+                  {
+                    id: 'fullstack-backend',
+                    label: `BACKEND & APIs (${allProjects.filter((p) => p.filterGroup === 'fullstack-backend').length})`,
+                  },
+                  {
+                    id: 'web-mobile',
+                    label: `WEB & APPS (${allProjects.filter((p) => p.filterGroup === 'web-mobile').length})`,
+                  },
+                ].map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveFilter(tab.id as FilterType)}
+                    className={`px-4 py-2 text-[10px] sm:text-[10.5px] font-medium tracking-[0.18em] uppercase rounded-sm transition-all duration-300 cursor-pointer ${
+                      activeFilter === tab.id
+                        ? 'bg-[#D4AF37] text-black shadow-[0_0_18px_rgba(212,175,55,0.35)]'
+                        : 'bg-[#120F0C] text-[#BDB0A4] border border-[#8C6D4F]/30 hover:border-[#D4AF37]/60 hover:text-white'
+                    }`}
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
-                    {project.description}
-                  </p>
-                </div>
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
 
-                <div>
-                  {/* Tech Pills */}
-                  <div className="flex flex-wrap gap-1.5 mb-6 pt-4 border-t border-[#8C6D4F]/20">
-                    {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="px-2 py-0.5 text-[9px] font-medium tracking-[0.14em] uppercase rounded-sm border border-[#8C6D4F]/30 bg-[#120F0C] text-[#E8D7C5] group-hover:border-[#D4AF37]/40 transition-colors"
+              {/* Permanent Grid View */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                {gridProjects.map((project, idx) => (
+                  <motion.div
+                    key={project.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: idx * 0.04 }}
+                    className="relative flex flex-col justify-between p-7 bg-[#0A0806] border border-[#8C6D4F]/30 hover:border-[#D4AF37] rounded-xl transition-all duration-300 group overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.85)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)]"
+                  >
+                    {/* Top Border Flare */}
+                    <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/70 to-transparent" />
+
+                    {/* Corner Minimal L-Brackets */}
+                    <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#D4AF37]/50 group-hover:border-[#D4AF37] transition-colors" />
+                    <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#D4AF37]/50 group-hover:border-[#D4AF37] transition-colors" />
+
+                    <div>
+                      {/* Header Row */}
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-[10px] font-mono tracking-[0.25em] text-[#D4AF37]">
+                          PROJ // {project.number}
+                        </span>
+                        <span
+                          className="text-[9.5px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] bg-[#120F0C] px-2.5 py-1 rounded border border-[#8C6D4F]/20"
+                          style={{ fontFamily: "'Montserrat', sans-serif" }}
+                        >
+                          {project.category}
+                        </span>
+                      </div>
+
+                      {/* Title */}
+                      <h3
+                        className="text-2xl sm:text-3xl font-normal tracking-tight text-[#F4EBE2] mb-3 group-hover:text-white transition-colors uppercase leading-[0.95]"
+                        style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                      >
+                        {project.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p
+                        className="text-xs text-[#BDB0A4] font-light leading-[1.8] mb-6 tracking-wide"
                         style={{ fontFamily: "'Montserrat', sans-serif" }}
                       >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+                        {project.description}
+                      </p>
+                    </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex items-center space-x-3">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 py-2.5 text-center border border-[#8C6D4F]/40 bg-[#120F0C] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#E8DFD8] hover:text-black text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
-                      style={{ fontFamily: "'Montserrat', sans-serif" }}
-                    >
-                      GITHUB REPO ↗
-                    </a>
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 py-2.5 text-center border border-[#D4AF37] bg-[#D4AF37]/15 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
-                        style={{ fontFamily: "'Montserrat', sans-serif" }}
-                      >
-                        LIVE DEMO ⚡
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+                    <div>
+                      {/* Tech Pills */}
+                      <div className="flex flex-wrap gap-1.5 mb-6 pt-4 border-t border-[#8C6D4F]/20">
+                        {project.tech.map((t) => (
+                          <span
+                            key={t}
+                            className="px-2 py-0.5 text-[9px] font-medium tracking-[0.14em] uppercase rounded-sm border border-[#8C6D4F]/30 bg-[#120F0C] text-[#E8D7C5] group-hover:border-[#D4AF37]/40 transition-colors"
+                            style={{ fontFamily: "'Montserrat', sans-serif" }}
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Action Buttons */}
+                      <div className="flex items-center space-x-3">
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 py-2.5 text-center border border-[#8C6D4F]/40 bg-[#120F0C] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#E8DFD8] hover:text-black text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                          style={{ fontFamily: "'Montserrat', sans-serif" }}
+                        >
+                          GITHUB REPO ↗
+                        </a>
+                        {project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 py-2.5 text-center border border-[#D4AF37] bg-[#D4AF37]/15 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                            style={{ fontFamily: "'Montserrat', sans-serif" }}
+                          >
+                            LIVE DEMO ⚡
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
