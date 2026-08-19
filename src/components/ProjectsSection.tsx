@@ -351,8 +351,8 @@ export const ProjectsSection: React.FC = () => {
         </motion.div>
 
         {/* Permanent 3D Stack Deck for Top 4 Projects */}
-        <div className="w-full mb-16">
-          <ScrollStack className="py-6" itemDistance={60}>
+        <div className="w-full mb-4">
+          <ScrollStack className="py-2" itemDistance={60}>
             {topProjects.map((project) => (
               <ScrollStackItem key={project.id}>
                 <div className="relative w-full p-8 sm:p-12 bg-[#0C0A08] border border-[#8C6D4F]/40 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.9)] overflow-hidden group">
