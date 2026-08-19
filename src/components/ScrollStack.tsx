@@ -88,7 +88,11 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
     const { scrollTop, containerHeight } = getScrollData();
     const stackPositionPx = parsePercentage(stackPosition, containerHeight);
     const scaleEndPositionPx = parsePercentage(scaleEndPosition, containerHeight);
-    const endElementTop = endElementTopRef.current;
+
+    const lastCardIndex = cardsRef.current.length - 1;
+    const lastCardTop = initialTopsRef.current[lastCardIndex] || 0;
+    const stackCompletionScrollTop = lastCardTop - stackPositionPx - itemStackDistance * lastCardIndex;
+    const pinEnd = stackCompletionScrollTop;
 
     cardsRef.current.forEach((card, i) => {
       if (!card) return;
@@ -97,8 +101,6 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
       const triggerStart = cardTop - stackPositionPx - itemStackDistance * i;
       const triggerEnd = cardTop - scaleEndPositionPx;
       const pinStart = cardTop - stackPositionPx - itemStackDistance * i;
-      const pinEnd = endElementTop - containerHeight / 2;
-
       const scaleProgress = calculateProgress(scrollTop, triggerStart, triggerEnd);
       const targetScale = baseScale + i * itemScale;
       const scale = 1 - scaleProgress * (1 - targetScale);
