@@ -13,22 +13,20 @@ interface RouteStop {
 const journey: RouteStop[] = [
   {
     id: '01',
-    year: 'JUNE 2026 - PRESENT',
-    title: 'UIUX + BACKEND DEVELOPER INTERN',
-    organization: 'NEXAPRIME PVT LTD',
-    description: (
-      <div className="space-y-4">
-        <ul className="list-disc pl-4 space-y-2 opacity-80">
-          <li>Designed 130+ UI screens using Figma and React.js, using AI tools (Visily, Stitch, ChatGPT) for wireframes, UI ideas, prototyping, and design improvements.</li>
-          <li>Helped the team speed up UI development, reduce design iterations, and maintain consistency across screens.</li>
-          <li>Worked on 4+ backend modules across 10+ microservices using NestJS, TypeScript, MongoDB, REST APIs, and Kafka.</li>
-          <li>Improved service communication and API Gateway routing, helping the team integrate new services faster, reduce service dependencies, and make the system easier to maintain and scale.</li>
-        </ul>
-      </div>
-    ),
+    year: '2020 - 2023',
+    title: 'DIPLOMA IN COMPUTER SCIENCE & ENG.',
+    organization: 'YASHWANTRAO POLYTECHNIC, ICHALKARANJI',
+    description: 'Built a strong foundation in programming, database management, and system design. (88.11%)',
   },
   {
     id: '02',
+    year: '2023 - 2026',
+    title: 'B.TECH IN COMPUTER SCIENCE (AIML)',
+    organization: 'KIT’S COLLEGE OF ENGINEERING, KOLHAPUR',
+    description: 'Focused on AI, Machine Learning, and core computer science fundamentals. (C.G.P.A : 9.07)',
+  },
+  {
+    id: '03',
     year: 'NOV 2025 - FEB 2026',
     title: 'SANKEY ARISE PROGRAM',
     organization: 'SANKEY SOLUTIONS PVT. LTD.',
@@ -42,18 +40,20 @@ const journey: RouteStop[] = [
     ),
   },
   {
-    id: '03',
-    year: '2020 - 2023',
-    title: 'DIPLOMA IN COMPUTER SCIENCE & ENG.',
-    organization: 'YASHWANTRAO POLYTECHNIC, ICHALKARANJI',
-    description: 'Built a strong foundation in programming, database management, and system design. (88.11%)',
-  },
-  {
     id: '04',
-    year: '2023 - 2026',
-    title: 'B.TECH IN COMPUTER SCIENCE (AIML)',
-    organization: 'KIT’S COLLEGE OF ENGINEERING, KOLHAPUR',
-    description: 'Focused on AI, Machine Learning, and core computer science fundamentals. (C.G.P.A : 9.07)',
+    year: 'JUNE 2026 - PRESENT',
+    title: 'UIUX + BACKEND DEVELOPER INTERN',
+    organization: 'NEXAPRIME PVT LTD',
+    description: (
+      <div className="space-y-4">
+        <ul className="list-disc pl-4 space-y-2 opacity-80">
+          <li>Designed 130+ UI screens using Figma and React.js, using AI tools (Visily, Stitch, ChatGPT) for wireframes, UI ideas, prototyping, and design improvements.</li>
+          <li>Helped the team speed up UI development, reduce design iterations, and maintain consistency across screens.</li>
+          <li>Worked on 4+ backend modules across 10+ microservices using NestJS, TypeScript, MongoDB, REST APIs, and Kafka.</li>
+          <li>Improved service communication and API Gateway routing, helping the team integrate new services faster, reduce service dependencies, and make the system easier to maintain and scale.</li>
+        </ul>
+      </div>
+    ),
   },
 ];
 
