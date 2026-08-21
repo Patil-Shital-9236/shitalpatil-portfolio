@@ -274,6 +274,57 @@ const allProjects: Project[] = [
       { label: 'OUTPUT', value: 'Alopecia Grading Score' },
     ],
   },
+  {
+    id: 'queueless-uiux',
+    number: '17',
+    title: 'QueueLess - Smart Clinic Queue Management',
+    category: 'UI/UX DESIGN',
+    filterGroup: 'web-mobile',
+    description:
+      'A high-fidelity UI/UX design and interactive prototype for a frictionless medical queue management system, allowing patients to skip the waiting room and track live queue progress.',
+    githubUrl: 'https://github.com/Patil-Shital-9236/queueless-uiux-design',
+    liveUrl: 'https://queue-flow-pro-46.lovable.app/',
+    tech: ['Figma', 'UI/UX Design', 'Wireframing', 'Prototyping'],
+    metrics: [
+      { label: 'TYPE', value: 'UI/UX Case Study' },
+      { label: 'DOMAIN', value: 'Healthcare Tech' },
+      { label: 'PROTOTYPE', value: 'Interactive' },
+    ],
+  },
+  {
+    id: 'portfolio-uiux',
+    number: '18',
+    title: 'Luxury Portfolio UI/UX System',
+    category: 'UI/UX DESIGN',
+    filterGroup: 'web-mobile',
+    description:
+      'A luxury dark-mode portfolio design architecture highlighting engineering competence and visual design proficiency. Employs a gold-accented palette to emphasize key technical achievements.',
+    githubUrl: 'https://github.com/Patil-Shital-9236/shital-patil-portfolio-uiux',
+    liveUrl: 'https://shitalpatil-portfolio.vercel.app/',
+    tech: ['Figma', 'Design System', 'Typography', 'Prototyping'],
+    metrics: [
+      { label: 'AESTHETIC', value: 'Dark Mode Luxury' },
+      { label: 'TYPE', value: 'Personal Branding' },
+      { label: 'FOCUS', value: 'Engineering Showcase' },
+    ],
+  },
+  {
+    id: 'burger-store-uiux',
+    number: '19',
+    title: 'Burger Store - Smart Food Ordering',
+    category: 'UI/UX DESIGN',
+    filterGroup: 'web-mobile',
+    description:
+      'A modern gourmet burger store UI/UX experience and interactive prototype for mobile food ordering. Features seamless navigation, vibrant product showcases, and a streamlined checkout flow.',
+    githubUrl: 'https://github.com/Patil-Shital-9236/burger-store-uiux-design',
+    liveUrl: 'https://www.figma.com/proto/NioH69BT4n9KyMAZ1kRaEN/EMS?node-id=1149-534&viewport=678%2C853%2C0.03&t=kzkxDRFE4y5s3P0p-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1149%3A534&page-id=153%3A2',
+    tech: ['Figma', 'Mobile UI', 'Interaction Design', 'E-commerce'],
+    metrics: [
+      { label: 'PLATFORM', value: 'Mobile Interface' },
+      { label: 'DOMAIN', value: 'E-commerce / Food' },
+      { label: 'STYLE', value: 'Vibrant & Modern' },
+    ],
+  }
 ];
 
 type FilterType = 'all' | 'ai-ml' | 'fullstack-backend' | 'web-mobile';
@@ -283,21 +334,16 @@ export const ProjectsSection: React.FC = () => {
   const [isGridExpanded, setIsGridExpanded] = useState<boolean>(false);
 
   const topProjects = allProjects.slice(0, 4);
-  const remainingProjects = allProjects.slice(4);
 
-  const filteredProjects =
+  const gridProjects =
     activeFilter === 'all'
-      ? remainingProjects
-      : remainingProjects.filter((p) => p.filterGroup === activeFilter);
-
-  const displayedGridProjects = isGridExpanded
-    ? filteredProjects
-    : filteredProjects.slice(0, 3);
+      ? allProjects
+      : allProjects.filter((p) => p.filterGroup === activeFilter);
 
   const handleToggleGrid = () => {
     const nextState = !isGridExpanded;
     setIsGridExpanded(nextState);
-    if (!nextState) {
+    if (nextState) {
       setTimeout(() => {
         const element = document.getElementById('all-projects-grid');
         if (element) {
@@ -329,7 +375,7 @@ export const ProjectsSection: React.FC = () => {
             className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            02 / ENGINEERING PROJECTS &amp; REPOSITORIES (16)
+            02 / ENGINEERING PROJECTS &amp; REPOSITORIES (19)
           </span>
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
         </motion.div>
@@ -374,7 +420,7 @@ export const ProjectsSection: React.FC = () => {
                       <div>
                         <div className="flex items-center space-x-3 mb-4">
                           <span className="text-xs font-mono tracking-[0.25em] text-[#D4AF37]">
-                            FLAGSHIP - {project.number}
+                            FLAGSHIP // {project.number}
                           </span>
                           <span
                             className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] bg-[#14100D] px-3 py-1 rounded border border-[#8C6D4F]/30"
@@ -434,16 +480,11 @@ export const ProjectsSection: React.FC = () => {
                             </a>
                           )}
                           <button
-                            onClick={() => {
-                              const element = document.getElementById('all-projects-grid');
-                              if (element) {
-                                element.scrollIntoView({ behavior: 'smooth' });
-                              }
-                            }}
+                            onClick={handleToggleGrid}
                             className="px-6 py-3 border border-[#D4AF37] bg-[#D4AF37]/10 hover:bg-[#D4AF37] text-[#D4AF37] hover:text-black text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer"
                             style={{ fontFamily: "'Montserrat', sans-serif" }}
                           >
-                            MORE PROJECTS ↓
+                            {isGridExpanded ? 'HIDE GRID ↑' : `SEE ALL ${allProjects.length} PROJECTS ↓`}
                           </button>
                         </div>
                       </div>
@@ -476,69 +517,98 @@ export const ProjectsSection: React.FC = () => {
           </ScrollStack>
         </div>
 
-        {/* ================= PART 2: GRID VIEW FOR REMAINING PROJECTS ================= */}
-        <div id="all-projects-grid" className="scroll-mt-24 pt-4 mb-16 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="flex items-center space-x-4 mb-5 pt-8 border-t border-[#8C6D4F]/20"
-          >
-            <span
-              className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
-              style={{ fontFamily: "'Montserrat', sans-serif" }}
-            >
-              MORE REPOSITORIES ({remainingProjects.length})
+        {/* ================= SEE ALL PROJECTS ACTION BAR AFTER STACK ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="relative z-10 flex flex-col sm:flex-row items-center justify-between p-6 sm:p-8 rounded-xl bg-gradient-to-r from-[#14100D] via-[#1F1914] to-[#14100D] border border-[#8C6D4F]/50 shadow-[0_15px_40px_rgba(0,0,0,0.85)] mt-8 mb-16 group"
+        >
+          <div className="mb-5 sm:mb-0">
+            <span className="text-[10px] font-mono tracking-[0.25em] text-[#D4AF37] uppercase block mb-1">
+              SEE ALL OPTION // EXPLORE FULL REPOSITORY GRID
             </span>
-            <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
-          </motion.div>
-
-          {/* Category Filter Tabs */}
-          <div className="flex flex-wrap items-center gap-2.5 mb-12 border-b border-[#8C6D4F]/25 pb-6">
-            {[
-              { id: 'all', label: `ALL (${remainingProjects.length})` },
-              {
-                id: 'ai-ml',
-                label: `AI & ML (${remainingProjects.filter((p) => p.filterGroup === 'ai-ml').length})`,
-              },
-              {
-                id: 'fullstack-backend',
-                label: `BACKEND & APIs (${remainingProjects.filter((p) => p.filterGroup === 'fullstack-backend').length})`,
-              },
-              {
-                id: 'web-mobile',
-                label: `WEB & APPS (${remainingProjects.filter((p) => p.filterGroup === 'web-mobile').length})`,
-              },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => {
-                  setActiveFilter(tab.id as FilterType);
-                  setIsGridExpanded(false);
-                }}
-                className={`px-4 py-2 text-[10px] sm:text-[10.5px] font-medium tracking-[0.18em] uppercase rounded-sm transition-all duration-300 cursor-pointer ${
-                  activeFilter === tab.id
-                    ? 'bg-[#D4AF37] text-black shadow-[0_0_18px_rgba(212,175,55,0.35)]'
-                    : 'bg-[#120F0C] text-[#BDB0A4] border border-[#8C6D4F]/30 hover:border-[#D4AF37]/60 hover:text-white'
-                }`}
-                style={{ fontFamily: "'Montserrat', sans-serif" }}
-              >
-                {tab.label}
-              </button>
-            ))}
+            <h4 className="text-xl sm:text-2xl text-white font-normal uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+              ALL 19 AI &amp; ML, BACKEND &amp; APPS REPOSITORIES AVAILABLE IN GRID VIEW
+            </h4>
           </div>
+          <button
+            onClick={handleToggleGrid}
+            className="w-full sm:w-auto px-8 py-3.5 bg-[#D4AF37] hover:bg-[#F7E7C4] text-black font-medium text-xs tracking-[0.22em] uppercase rounded-sm transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.35)] flex items-center justify-center space-x-3 shrink-0 cursor-pointer"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
+          >
+            <span>{isGridExpanded ? 'HIDE PROJECTS GRID' : `SEE ALL PROJECTS (${allProjects.length})`}</span>
+            <span className="text-sm font-bold">{isGridExpanded ? '↑' : '↓'}</span>
+          </button>
+        </motion.div>
 
-          {/* Grid View */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-            <AnimatePresence mode="popLayout">
-              {displayedGridProjects.map((project, idx) => (
+        {/* ================= PART 2: COLLAPSIBLE GRID VIEW FOR ALL REPOSITORIES ================= */}
+        <AnimatePresence>
+          {isGridExpanded && (
+            <motion.div
+              id="all-projects-grid"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 30 }}
+              transition={{ duration: 0.4 }}
+              className="scroll-mt-24 pt-4"
+            >
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex items-center space-x-4 mb-5 pt-8 border-t border-[#8C6D4F]/20"
+              >
+                <span
+                  className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
+                >
+                  ALL ENGINEERING REPOSITORIES GRID ({allProjects.length})
+                </span>
+                <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
+              </motion.div>
+
+              {/* Category Filter Tabs */}
+              <div className="flex flex-wrap items-center gap-2.5 mb-12 border-b border-[#8C6D4F]/25 pb-6">
+                {[
+                  { id: 'all', label: `ALL PROJECTS (${allProjects.length})` },
+                  {
+                    id: 'ai-ml',
+                    label: `AI & ML (${allProjects.filter((p) => p.filterGroup === 'ai-ml').length})`,
+                  },
+                  {
+                    id: 'fullstack-backend',
+                    label: `BACKEND & APIs (${allProjects.filter((p) => p.filterGroup === 'fullstack-backend').length})`,
+                  },
+                  {
+                    id: 'web-mobile',
+                    label: `WEB & APPS (${allProjects.filter((p) => p.filterGroup === 'web-mobile').length})`,
+                  },
+                ].map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveFilter(tab.id as FilterType)}
+                    className={`px-4 py-2 text-[10px] sm:text-[10.5px] font-medium tracking-[0.18em] uppercase rounded-sm transition-all duration-300 cursor-pointer ${
+                      activeFilter === tab.id
+                        ? 'bg-[#D4AF37] text-black shadow-[0_0_18px_rgba(212,175,55,0.35)]'
+                        : 'bg-[#120F0C] text-[#BDB0A4] border border-[#8C6D4F]/30 hover:border-[#D4AF37]/60 hover:text-white'
+                    }`}
+                    style={{ fontFamily: "'Montserrat', sans-serif" }}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Permanent Grid View */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                {gridProjects.map((project, idx) => (
                   <motion.div
                     key={project.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.5, delay: (idx % 3) * 0.04 }}
+                    transition={{ duration: 0.5, delay: idx * 0.04 }}
                     className="relative flex flex-col justify-between p-7 bg-[#0A0806] border border-[#8C6D4F]/30 hover:border-[#D4AF37] rounded-xl transition-all duration-300 group overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.85)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)]"
                   >
                     {/* Top Border Flare */}
@@ -552,7 +622,7 @@ export const ProjectsSection: React.FC = () => {
                       {/* Header Row */}
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-[10px] font-mono tracking-[0.25em] text-[#D4AF37]">
-                          PROJ - {project.number}
+                          PROJ // {project.number}
                         </span>
                         <span
                           className="text-[9.5px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] bg-[#120F0C] px-2.5 py-1 rounded border border-[#8C6D4F]/20"
@@ -619,39 +689,10 @@ export const ProjectsSection: React.FC = () => {
                     </div>
                   </motion.div>
                 ))}
-            </AnimatePresence>
-          </div>
-
-          {/* ================= SEE ALL PROJECTS ACTION BAR AT BOTTOM ================= */}
-          {filteredProjects.length > 3 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="relative z-10 flex flex-col sm:flex-row items-center justify-between p-6 sm:p-8 rounded-xl bg-gradient-to-r from-[#14100D] via-[#1F1914] to-[#14100D] border border-[#8C6D4F]/50 shadow-[0_15px_40px_rgba(0,0,0,0.85)] mt-12 group"
-            >
-              <div className="mb-5 sm:mb-0">
-                <span className="text-[10px] font-mono tracking-[0.25em] text-[#D4AF37] uppercase block mb-1">
-                  {isGridExpanded ? 'COLLAPSE REPOSITORY GRID' : 'SEE ALL OPTION - EXPLORE FULL REPOSITORY GRID'}
-                </span>
-                <h4 className="text-xl sm:text-2xl text-white font-normal uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                  {isGridExpanded 
-                    ? `SHOWING ALL ${filteredProjects.length} REPOSITORIES IN THIS CATEGORY` 
-                    : `VIEW REMAINING ${filteredProjects.length - 3} REPOSITORIES IN THIS CATEGORY`}
-                </h4>
               </div>
-              <button
-                onClick={handleToggleGrid}
-                className="w-full sm:w-auto px-8 py-3.5 bg-[#D4AF37] hover:bg-[#F7E7C4] text-black font-medium text-xs tracking-[0.22em] uppercase rounded-sm transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.35)] flex items-center justify-center space-x-3 shrink-0 cursor-pointer"
-                style={{ fontFamily: "'Montserrat', sans-serif" }}
-              >
-                <span>{isGridExpanded ? 'SHOW LESS' : 'SEE ALL PROJECTS'}</span>
-                <span className="text-sm font-bold">{isGridExpanded ? '↑' : '↓'}</span>
-              </button>
             </motion.div>
           )}
-        </div>
+        </AnimatePresence>
       </div>
     </section>
   );
