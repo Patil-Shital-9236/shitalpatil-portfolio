@@ -206,16 +206,14 @@ export const HeroSection: React.FC = () => {
               </p>
             </motion.div>
 
-            {/* 3-Line Description */}
+            {/* Bio Description */}
             <motion.div
               variants={fadeUpVariants}
-              className="text-xs sm:text-sm md:text-[13.5px] font-light text-[#A8988B] leading-[1.8] tracking-wide max-w-lg mb-6 space-y-1"
+              className="text-xs sm:text-sm md:text-[13.5px] font-light text-[#A8988B] leading-relaxed tracking-wide max-w-xl mb-6"
               style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               <p>
-                UI/UX designer and backend developer building intuitive digital experiences
-                <br />
-                and scalable systems.
+                UI/UX designer and backend developer building intuitive digital experiences and scalable systems.
               </p>
             </motion.div>
 
