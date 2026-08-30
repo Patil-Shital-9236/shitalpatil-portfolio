@@ -92,7 +92,7 @@ const allProjects: Project[] = [
     filterGroup: 'web-mobile',
     description:
       'Solved the problem of managing health-product shopping and customer guidance in one place, helping customers choose green tea and sprouts based on health and nutrition goals. Built 6+ modules for products, users, voice search, fitness guidance, payments, and admin management. Integrated Groq API + Google Speech-to-Text for multilingual AI assistance and voice ordering, with 4 payment options for easier customer checkout.',
-    githubUrl: 'https://github.com/Patil-Shital-9236',
+    githubUrl: 'https://github.com/Patil-Shital-9236/FLC-Project',
     tech: ['Flutter', 'Dart', 'PHP', 'MySQL', 'Groq API', 'Google Speech-to-Text'],
     metrics: [
       { label: 'AI VOICE', value: 'Google Speech-to-Text' },
@@ -108,7 +108,7 @@ const allProjects: Project[] = [
     filterGroup: 'ai-ml',
     description:
       'Solved the problem of creating images manually from scratch by allowing users to generate images directly from text prompts. Built the application with React.js + Flask, connecting the frontend with the AI image-generation backend. Used Stable Diffusion, caching, and Docker to generate images, avoid repeated requests, and simplify backend deployment.',
-    githubUrl: 'https://github.com/Patil-Shital-9236',
+    githubUrl: 'https://github.com/Patil-Shital-9236/project_mode_ui_ux_gpt3',
     liveUrl: 'https://text-to-image-w2ji.vercel.app/login',
     tech: ['React.js', 'Flask', 'Stable Diffusion', 'Docker', 'Python', 'REST APIs'],
     metrics: [
@@ -189,7 +189,7 @@ const allProjects: Project[] = [
     filterGroup: 'ai-ml',
     description:
       'AI-powered clinical decision support engine that processes patient symptoms, medical histories, and diagnostic parameters to generate preliminary medical triage assessments.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/Aarogya-Assist-Medica-AI',
+    githubUrl: 'https://github.com/Patil-Shital-9236/Aarogya-Assist-medica.ai-',
     tech: ['Python', 'Machine Learning', 'Medical NLP', 'Streamlit', 'Scikit-Learn'],
     metrics: [
       { label: 'MODEL', value: 'Medical Decision Tree' },
@@ -205,7 +205,7 @@ const allProjects: Project[] = [
     filterGroup: 'ai-ml',
     description:
       'Convolutional Neural Network (CNN) trained on dermatological image datasets to classify psoriasis severity levels and differentiate dermatological conditions with high precision.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/Psoriasis-Disease-Classification-CNN',
+    githubUrl: 'https://github.com/Patil-Shital-9236/PSORIASIS-CLASSIFICATION-USING-DEEP-LEARNING',
     tech: ['TensorFlow', 'Keras', 'CNN Architecture', 'OpenCV', 'Python'],
     metrics: [
       { label: 'ARCHITECTURE', value: 'ResNet / CNN' },
@@ -221,7 +221,7 @@ const allProjects: Project[] = [
     filterGroup: 'fullstack-backend',
     description:
       'Transaction processing engine supporting ACID-compliant fund transfers, account ledger balance verification, overdraft controls, and transaction logging.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/SmartBank-Core-Banking',
+    githubUrl: 'https://github.com/Patil-Shital-9236/SmartBank',
     tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker', 'JUnit', 'REST APIs'],
     metrics: [
       { label: 'SAFETY', value: 'ACID Transactions' },
@@ -237,7 +237,7 @@ const allProjects: Project[] = [
     filterGroup: 'web-mobile',
     description:
       'Full-stack educational platform delivering interactive course modules, progress tracking analytics, quiz evaluation engines, and real-time student engagement dashboards.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/EduCare-Learning-Platform',
+    githubUrl: 'https://github.com/Patil-Shital-9236/EduCare',
     tech: ['React.js', 'Firebase', 'Tailwind CSS', 'Node.js', 'Express'],
     metrics: [
       { label: 'FRONTEND', value: 'React + Tailwind' },
@@ -253,7 +253,7 @@ const allProjects: Project[] = [
     filterGroup: 'ai-ml',
     description:
       'Interactive AI chatbot tailored for kids with age-appropriate content filtering, gamified learning prompts, voice input support, and friendly storytelling features.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/Kids-Educational-AI-Chatbot',
+    githubUrl: 'https://github.com/Patil-Shital-9236/Educational_chatbot_for_kids',
     tech: ['Python', 'OpenAI API', 'Speech Recognition', 'Gradio', 'NLP'],
     metrics: [
       { label: 'SAFETY', value: 'Kid-Safe Content Guard' },
@@ -269,7 +269,7 @@ const allProjects: Project[] = [
     filterGroup: 'web-mobile',
     description:
       'Kanban task management system featuring drag-and-drop workflow status, priority tagging, automated deadline reminders, and productivity analytics.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/Task-Tracker-App',
+    githubUrl: 'https://github.com/Patil-Shital-9236/task_manager_js',
     tech: ['TypeScript', 'React.js', 'Redux Toolkit', 'Tailwind CSS'],
     metrics: [
       { label: 'STATE', value: 'Redux Toolkit' },
@@ -285,7 +285,7 @@ const allProjects: Project[] = [
     filterGroup: 'ai-ml',
     description:
       'Computer vision verification model using Structural Similarity Index (SSIM) and image alignment algorithms to detect fraud, manipulation, or tampering in PAN identity cards.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/Pan-Card-Tampering-Detection',
+    githubUrl: 'https://github.com/Patil-Shital-9236/PanCard_Temparing',
     tech: ['Python', 'OpenCV', 'Scikit-Image', 'SSIM Algorithm', 'Flask'],
     metrics: [
       { label: 'ALGORITHM', value: 'SSIM Comparison' },
@@ -301,7 +301,7 @@ const allProjects: Project[] = [
     filterGroup: 'ai-ml',
     description:
       'Predictive environmental analytics system forecasting forest fire risk probabilities using historical meteorological data, temperature indexes, and Random Forest regressors.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/Forest-Fire-Risk-Analysis',
+    githubUrl: 'https://github.com/Patil-Shital-9236/Forest_Firers_App',
     tech: ['Python', 'Random Forest', 'Pandas', 'Seaborn', 'Scikit-Learn'],
     metrics: [
       { label: 'MODEL', value: 'Random Forest Regressor' },
@@ -317,7 +317,7 @@ const allProjects: Project[] = [
     filterGroup: 'ai-ml',
     description:
       'Dermatological image classification pipeline detecting scalp health conditions and estimating androgenetic alopecia stages using deep learning feature extraction.',
-    githubUrl: 'https://github.com/Patil-Shital-9236/Scalp-Analysis-Baldness-Detection',
+    githubUrl: 'https://github.com/Patil-Shital-9236/Baldness-detection',
     tech: ['Python', 'PyTorch', 'OpenCV', 'Convolutional Nets', 'Flask'],
     metrics: [
       { label: 'FRAMEWORK', value: 'PyTorch Deep Learning' },
@@ -349,21 +349,22 @@ export const ProjectsSection: React.FC = () => {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 150);
+      }, 100);
     }
   };
 
   return (
     <section
       id="projects"
-      className="relative w-full bg-black text-[#E8DFD8] font-sans selection:bg-[#cbb59d] selection:text-black pt-20 pb-32 px-6 sm:px-12 lg:px-20 overflow-hidden"
+      className="relative w-full bg-black text-[#E8DFD8] font-sans pt-20 pb-32 px-6 sm:px-12 lg:px-20 overflow-hidden"
     >
-      {/* Background Lighting */}
-      <div className="absolute top-1/4 left-1/4 w-[36rem] h-[36rem] bg-[#D4AF37]/5 rounded-full blur-[180px] pointer-events-none" />
-      <div className="absolute bottom-1/3 right-1/4 w-[32rem] h-[32rem] bg-[#8C6D4F]/5 rounded-full blur-[170px] pointer-events-none" />
+      {/* Background Ambient Glows */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[45rem] h-[45rem] bg-[#D4AF37]/5 rounded-full blur-[190px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-[35rem] h-[35rem] bg-[#8C6D4F]/5 rounded-full blur-[180px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
-        {/* ================= PART 1: TOP 4 FEATURED STACK DECK ================= */}
+        
+        {/* Eyebrow Header */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -375,7 +376,7 @@ export const ProjectsSection: React.FC = () => {
             className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            02 / ENGINEERING PROJECTS &amp; REPOSITORIES (19)
+            02 / FEATURED PROJECTS ({allProjects.length})
           </span>
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
         </motion.div>
@@ -386,107 +387,107 @@ export const ProjectsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-8"
+          className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
         >
           <h2
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight uppercase leading-[0.85] select-none"
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#D5CBC0] to-[#605448] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-              FEATURED ENGINEERING.
+              ENGINEERING ARCHITECTURE &amp;
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#F7E7C4] via-[#C99E5D] to-[#543B1A] drop-shadow-[0_8px_25px_rgba(201,158,93,0.35)]">
-              PROTOTYPES &amp; SYSTEMS.
+              INTELLIGENT SYSTEMS.
             </span>
           </h2>
+
+          <p
+            className="text-xs sm:text-sm font-light text-[#A8988B] max-w-md leading-relaxed"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
+          >
+            Showing Top 4 Flagship Projects in 3D Stack Deck. Explore all {allProjects.length} repositories across AI/ML, Full Stack, and Web Applications in the expandable Grid below.
+          </p>
         </motion.div>
 
-        {/* Permanent 3D Stack Deck for Top 4 Projects */}
-        <div className="w-full mb-4">
-          <ScrollStack className="py-2" itemDistance={60}>
+        {/* ================= PART 1: 3D STACK DECK FOR TOP 4 PROJECTS ================= */}
+        <div className="relative w-full mb-8">
+          <ScrollStack useWindowScroll={true}>
             {topProjects.map((project) => (
               <ScrollStackItem key={project.id}>
-                <div className="relative w-full p-8 sm:p-12 bg-[#0C0A08] border border-[#8C6D4F]/40 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.9)] overflow-hidden group">
-                  {/* Top Gold Horizon Edge */}
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+                <div className="relative w-full p-8 sm:p-10 rounded-2xl border-2 border-[#8C6D4F]/50 bg-gradient-to-br from-[#120F0C] via-[#0A0806] to-[#050403] shadow-[0_25px_60px_rgba(0,0,0,0.9)] overflow-hidden transition-all duration-300 group">
+                  {/* Subtle Top Gold Highlight */}
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-80" />
 
-                  {/* Corner Accents */}
-                  <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]" />
-                  <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]" />
+                  {/* Corner Metallic Accent Pins */}
+                  <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]/60" />
+                  <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]/60" />
+                  <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#D4AF37]/60" />
+                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#D4AF37]/60" />
 
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    {/* Left Info */}
-                    <div className="lg:col-span-7 flex flex-col justify-between h-full">
-                      <div>
-                        <div className="flex items-center space-x-3 mb-4">
-                          <span className="text-xs font-mono tracking-[0.25em] text-[#D4AF37]">
-                            FLAGSHIP // {project.number}
-                          </span>
-                          <span
-                            className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] bg-[#14100D] px-3 py-1 rounded border border-[#8C6D4F]/30"
-                            style={{ fontFamily: "'Montserrat', sans-serif" }}
-                          >
-                            {project.category}
-                          </span>
-                        </div>
-
-                        <h3
-                          className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white mb-4 uppercase leading-[0.9]"
-                          style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                        >
-                          {project.title}
-                        </h3>
-
-                        <p
-                          className="text-xs sm:text-sm text-[#BDB0A4] font-light leading-relaxed mb-8 max-w-xl"
-                          style={{ fontFamily: "'Montserrat', sans-serif" }}
-                        >
-                          {project.description}
-                        </p>
+                    {/* Left Info Column */}
+                    <div className="lg:col-span-7 space-y-5">
+                      <div className="flex items-center space-x-3">
+                        <span className="text-[11px] font-mono tracking-[0.25em] text-[#D4AF37] bg-[#1A1510] px-3 py-1 rounded border border-[#D4AF37]/30">
+                          TOP PROJECT // {project.number}
+                        </span>
+                        <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#8C6D4F] border border-[#8C6D4F]/30 px-2.5 py-1 rounded">
+                          {project.category}
+                        </span>
                       </div>
 
-                      <div>
-                        <div className="flex flex-wrap gap-2 mb-8">
-                          {project.tech.map((t) => (
-                            <span
-                              key={t}
-                              className="px-3 py-1 text-[10px] font-medium tracking-[0.15em] uppercase rounded-sm border border-[#8C6D4F]/40 bg-[#14100D] text-[#E8D7C5]"
-                              style={{ fontFamily: "'Montserrat', sans-serif" }}
-                            >
-                              {t}
-                            </span>
-                          ))}
-                        </div>
+                      <h3
+                        className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-white uppercase leading-[0.9]"
+                        style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                      >
+                        {project.title}
+                      </h3>
 
-                        <div className="flex flex-wrap items-center gap-3">
+                      <p
+                        className="text-xs sm:text-sm text-[#BDB0A4] font-light leading-relaxed tracking-wide"
+                        style={{ fontFamily: "'Montserrat', sans-serif" }}
+                      >
+                        {project.description}
+                      </p>
+
+                      {/* Tech Pills */}
+                      <div className="flex flex-wrap gap-2 pt-2">
+                        {project.tech.map((t) => (
+                          <span
+                            key={t}
+                            className="px-3 py-1 text-[10px] font-medium tracking-[0.15em] uppercase rounded-sm border border-[#8C6D4F]/40 bg-[#171310] text-[#E8D7C5]"
+                            style={{ fontFamily: "'Montserrat', sans-serif" }}
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Action Links */}
+                      <div className="flex flex-wrap gap-4 pt-4">
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-6 py-3 border border-[#D4AF37] bg-[#D4AF37]/10 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300 rounded-sm shadow-[0_0_15px_rgba(212,175,55,0.2)] flex items-center space-x-2"
+                          style={{ fontFamily: "'Montserrat', sans-serif" }}
+                        >
+                          <span>GITHUB REPOSITORY</span>
+                          <span className="text-xs">↗</span>
+                        </a>
+
+                        {project.liveUrl && (
                           <a
-                            href={project.githubUrl}
+                            href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-6 py-3 border border-[#8C6D4F] bg-[#14100D] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-white hover:text-black text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                            className="px-6 py-3 border border-[#8C6D4F]/60 bg-[#1A1510] hover:border-[#D4AF37] text-[#E8D7C5] hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300 rounded-sm flex items-center space-x-2"
                             style={{ fontFamily: "'Montserrat', sans-serif" }}
                           >
-                            VIEW SOURCE CODE ↗
+                            <span>LIVE DEMO</span>
+                            <span className="text-xs">🌐</span>
                           </a>
-                          {project.liveUrl && (
-                            <a
-                              href={project.liveUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="px-6 py-3 border border-[#D4AF37] bg-[#D4AF37]/20 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300"
-                              style={{ fontFamily: "'Montserrat', sans-serif" }}
-                            >
-                              OPEN LIVE DEMO ⚡
-                            </a>
-                          )}
-                          <button
-                            onClick={handleToggleGrid}
-                            className="px-6 py-3 border border-[#D4AF37] bg-[#D4AF37]/10 hover:bg-[#D4AF37] text-[#D4AF37] hover:text-black text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer"
-                            style={{ fontFamily: "'Montserrat', sans-serif" }}
-                          >
-                            {isGridExpanded ? 'HIDE GRID ↑' : `SEE ALL ${allProjects.length} PROJECTS ↓`}
-                          </button>
-                        </div>
+                        )}
                       </div>
                     </div>
 
@@ -659,7 +660,7 @@ export const ProjectsSection: React.FC = () => {
                         {project.tech.map((t) => (
                           <span
                             key={t}
-                            className="px-2 py-0.5 text-[9px] font-medium tracking-[0.14em] uppercase rounded-sm border border-[#8C6D4F]/30 bg-[#120F0C] text-[#E8D7C5] group-hover:border-[#D4AF37]/40 transition-colors"
+                            className="px-2.5 py-1 text-[9.5px] font-medium tracking-[0.14em] uppercase rounded-sm border border-[#8C6D4F]/35 bg-[#120F0C] text-[#E8D7C5]"
                             style={{ fontFamily: "'Montserrat', sans-serif" }}
                           >
                             {t}
@@ -667,26 +668,29 @@ export const ProjectsSection: React.FC = () => {
                         ))}
                       </div>
 
-                      {/* Action Buttons */}
-                      <div className="flex items-center space-x-3">
+                      {/* Action Links */}
+                      <div className="flex flex-col sm:flex-row gap-2.5">
                         <a
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex-1 py-2.5 text-center border border-[#8C6D4F]/40 bg-[#120F0C] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#E8DFD8] hover:text-black text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                          className="flex-1 inline-flex items-center justify-center space-x-2 py-3 border border-[#D4AF37]/70 bg-[#D4AF37]/10 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[10.5px] font-medium tracking-[0.18em] uppercase transition-all duration-300 rounded-sm shadow-[0_0_15px_rgba(212,175,55,0.15)]"
                           style={{ fontFamily: "'Montserrat', sans-serif" }}
                         >
-                          GITHUB REPO ↗
+                          <span>GITHUB REPO</span>
+                          <span className="text-xs">↗</span>
                         </a>
+
                         {project.liveUrl && (
                           <a
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex-1 py-2.5 text-center border border-[#D4AF37] bg-[#D4AF37]/15 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
+                            className="flex-1 inline-flex items-center justify-center space-x-2 py-3 border border-[#8C6D4F]/40 bg-[#120F0C] hover:border-[#D4AF37] hover:bg-[#1A1510] text-[#E8D7C5] hover:text-white text-[10.5px] font-medium tracking-[0.18em] uppercase transition-all duration-300 rounded-sm"
                             style={{ fontFamily: "'Montserrat', sans-serif" }}
                           >
-                            LIVE DEMO ⚡
+                            <span>LIVE DEMO</span>
+                            <span className="text-xs">🌐</span>
                           </a>
                         )}
                       </div>
