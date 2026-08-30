@@ -136,10 +136,10 @@ export const AboutSection: React.FC = () => {
               style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               <p>
-                I’m <span className="text-[#F3DBB3] font-medium">Shital Patil</span>, a Backend Developer and UI/UX Designer passionate about building scalable systems and intuitive digital experiences. I work across backend architecture, microservices, APIs, databases, cloud technologies, and modern interfaces, combining engineering with design to create practical and user-focused products.
+                I’m <span className="text-[#F3DBB3] font-medium">Shital Patil</span>, a UI/UX Designer and Full Stack Developer passionate about crafting intuitive digital experiences and scalable systems. I work across interface design, user research, wireframing, high-fidelity Figma prototyping, design systems, and modern frontend &amp; backend architectures, combining user-centered design with engineering precision.
               </p>
               <p>
-                My experience spans backend development, full-stack applications, AI-powered projects, and interface design. I enjoy solving complex technical problems while keeping the final product simple, usable, and visually engaging.
+                My experience spans UI/UX product design, interactive prototypes, full-stack applications, and AI-powered projects. I enjoy solving complex user experience &amp; technical problems while delivering simple, seamless, and visually captivating digital products.
               </p>
             </motion.div>
 
