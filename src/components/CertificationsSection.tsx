@@ -24,7 +24,7 @@ const certificatesList: Certificate[] = [
     categoryLabel: 'AI & MACHINE LEARNING',
     date: 'Verified',
     badge: '🤖 GENERATIVE AI LITERACY',
-    badgeColor: 'from-[#4285F4]/20 to-[#D4AF37]/20 border-[#4285F4]/60',
+    badgeColor: 'from-[#4285F4]/20 via-[#D4AF37]/20 to-black border-[#4285F4]/50',
     description:
       'Certified in Generative AI Literacy, covering fundamental concepts of Large Language Models (LLMs), prompt engineering principles, AI productivity integration, and enterprise AI usage.',
     skills: ['Generative AI', 'LLMs', 'Prompt Engineering', 'AI Productivity'],
@@ -39,7 +39,7 @@ const certificatesList: Certificate[] = [
     categoryLabel: 'FULL STACK & BACKEND',
     date: 'Verified',
     badge: '⚡ SANKEY ARISE PROGRAM',
-    badgeColor: 'from-[#D4AF37]/20 to-[#8C6D4F]/20 border-[#D4AF37]/60',
+    badgeColor: 'from-[#D4AF37]/20 via-[#8C6D4F]/20 to-black border-[#D4AF37]/50',
     description:
       'Completed the intensive Sankey Arise Training Program specializing in software engineering, full stack architecture, data structures, and production web applications.',
     skills: ['Software Engineering', 'Full Stack Development', 'Data Structures', 'Web Applications'],
@@ -54,7 +54,7 @@ const certificatesList: Certificate[] = [
     categoryLabel: 'CYBERSECURITY & CLOUD',
     date: 'Verified',
     badge: '🛡️ CYBERSECURITY SIMULATION',
-    badgeColor: 'from-[#EA4335]/20 to-[#FBBC05]/20 border-[#EA4335]/60',
+    badgeColor: 'from-[#EA4335]/20 via-[#FBBC05]/20 to-black border-[#EA4335]/50',
     description:
       'Completed the Cybersecurity Virtual Experience Program on Forage, analyzing network threat intelligence, security posture management, vulnerability assessments, and incident response.',
     skills: ['Cybersecurity', 'Threat Analysis', 'Network Defense', 'Vulnerability Assessment'],
@@ -69,7 +69,7 @@ const certificatesList: Certificate[] = [
     categoryLabel: 'AI & MACHINE LEARNING',
     date: 'Verified',
     badge: '☁️ GOOGLE CLOUD GENAI LEADER',
-    badgeColor: 'from-[#4285F4]/20 to-[#34A853]/20 border-[#4285F4]/60',
+    badgeColor: 'from-[#4285F4]/20 via-[#34A853]/20 to-black border-[#4285F4]/50',
     description:
       'Awarded official Google Cloud Generative AI Leader Track certificate for demonstrating expertise in Gemini models, LLM architectures, Vertex AI, and cloud AI deployment.',
     skills: ['Google Cloud', 'Generative AI', 'Gemini Models', 'Vertex AI', 'Cloud AI'],
@@ -84,7 +84,7 @@ const certificatesList: Certificate[] = [
     categoryLabel: 'FULL STACK & BACKEND',
     date: 'Verified',
     badge: '💼 FORAGE JOB SIMULATION',
-    badgeColor: 'from-[#34A853]/20 to-[#4285F4]/20 border-[#34A853]/60',
+    badgeColor: 'from-[#34A853]/20 via-[#4285F4]/20 to-black border-[#34A853]/50',
     description:
       'Completed practical software engineering job simulation on Forage solving real-world development tasks, code refactoring, API integration, and software design.',
     skills: ['Software Engineering', 'Code Refactoring', 'API Integration', 'Software Design'],
@@ -99,7 +99,7 @@ const certificatesList: Certificate[] = [
     categoryLabel: 'FULL STACK & BACKEND',
     date: 'Verified',
     badge: '🏆 NAUKRICAMPUS PARTICIPATION',
-    badgeColor: 'from-[#FFA116]/20 to-[#D4AF37]/20 border-[#FFA116]/60',
+    badgeColor: 'from-[#FFA116]/20 via-[#D4AF37]/20 to-black border-[#FFA116]/50',
     description:
       'Official Certificate of Participation in NaukriCampus national engineering skill evaluation and competitive technical assessment.',
     skills: ['Technical Assessment', 'Coding Evaluation', 'Problem Solving', 'Engineering Fundamentals'],
@@ -114,7 +114,7 @@ const certificatesList: Certificate[] = [
     categoryLabel: 'AI & MACHINE LEARNING',
     date: 'Verified',
     badge: '🧠 MACHINE LEARNING INTERNSHIP',
-    badgeColor: 'from-[#8C6D4F]/20 to-[#D4AF37]/20 border-[#D4AF37]/60',
+    badgeColor: 'from-[#8C6D4F]/20 via-[#D4AF37]/20 to-black border-[#D4AF37]/50',
     description:
       'Successfully completed Machine Learning Internship at Cognifyz Technologies building predictive ML models, data preprocessing pipelines, evaluation metrics, and algorithm implementations.',
     skills: ['Machine Learning', 'Python', 'Scikit-Learn', 'Data Analysis', 'Predictive Modeling'],
@@ -129,7 +129,7 @@ const certificatesList: Certificate[] = [
     categoryLabel: 'FULL STACK & BACKEND',
     date: 'Verified',
     badge: '⚙️ BACKEND WEB DEVELOPMENT INTERNSHIP',
-    badgeColor: 'from-[#D4AF37]/20 to-[#120F0C]/40 border-[#D4AF37]/60',
+    badgeColor: 'from-[#D4AF37]/20 via-[#120F0C]/40 to-black border-[#D4AF37]/50',
     description:
       'Awarded Backend Web Development Internship completion for designing RESTful APIs, database schema design, asynchronous server handlers, and scalable backend logic.',
     skills: ['Backend Development', 'Node.js', 'REST APIs', 'Database Architecture', 'Server Security'],
@@ -154,9 +154,9 @@ export const CertificationsSection: React.FC = () => {
       id="certifications"
       className="relative w-full bg-black text-[#E8DFD8] font-sans pt-20 pb-32 px-6 sm:px-12 lg:px-20 overflow-hidden"
     >
-      {/* Ambient Lighting */}
-      <div className="absolute top-1/3 right-1/4 w-[32rem] h-[32rem] bg-[#D4AF37]/5 rounded-full blur-[170px] pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/4 w-[28rem] h-[28rem] bg-[#8C6D4F]/5 rounded-full blur-[160px] pointer-events-none" />
+      {/* Background Glows */}
+      <div className="absolute top-1/3 right-1/4 w-[36rem] h-[36rem] bg-[#D4AF37]/5 rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/4 w-[32rem] h-[32rem] bg-[#8C6D4F]/5 rounded-full blur-[170px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Eyebrow Header */}
@@ -200,7 +200,7 @@ export const CertificationsSection: React.FC = () => {
             className="text-xs sm:text-sm font-light text-[#A8988B] max-w-md leading-relaxed"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            Explore all {certificatesList.length} verified certificates, internship awards, and Google Cloud credentials with direct LinkedIn verification links.
+            Explore all {certificatesList.length} verified certificates, internship awards, and Google Cloud credentials with interactive document previews and direct verification links.
           </p>
         </motion.div>
 
@@ -236,7 +236,7 @@ export const CertificationsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Certificates Grid */}
+        {/* Certificates Grid - Ultra Modern Glassmorphism Cards */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeFilter}
@@ -253,31 +253,31 @@ export const CertificationsSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.08 }}
-                className="relative flex flex-col justify-between p-7 sm:p-8 bg-[#0A0806] border border-[#8C6D4F]/30 hover:border-[#D4AF37] rounded-xl transition-all duration-300 group overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.85)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)]"
+                className="relative flex flex-col justify-between p-7 sm:p-8 bg-[#090806]/90 backdrop-blur-xl border border-[#8C6D4F]/35 hover:border-[#D4AF37] rounded-2xl transition-all duration-500 group overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.9)] hover:shadow-[0_25px_60px_rgba(212,175,55,0.15)] hover:-translate-y-1"
               >
-                {/* Top Border Flare */}
-                <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/70 to-transparent" />
+                {/* Top Gold Horizon Edge */}
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
 
                 {/* Corner Minimal L-Brackets */}
-                <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#D4AF37]/50 group-hover:border-[#D4AF37] transition-colors" />
-                <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#D4AF37]/50 group-hover:border-[#D4AF37] transition-colors" />
+                <div className="absolute top-0 left-0 w-3.5 h-3.5 border-t-2 border-l-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
+                <div className="absolute top-0 right-0 w-3.5 h-3.5 border-t-2 border-r-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
 
-                {/* Visual Certificate Frame Banner */}
-                <div className={`mb-6 p-4 rounded-lg bg-gradient-to-r ${cert.badgeColor} border flex items-center justify-between`}>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-black/60 border border-[#D4AF37]/60 flex items-center justify-center text-sm">
+                {/* Visual Certificate Header Banner */}
+                <div className={`mb-6 p-4 rounded-xl bg-gradient-to-r ${cert.badgeColor} border flex items-center justify-between shadow-inner`}>
+                  <div className="flex items-center space-x-3.5">
+                    <div className="w-9 h-9 rounded-full bg-black/70 border border-[#D4AF37]/70 flex items-center justify-center text-base shadow-[0_0_12px_rgba(212,175,55,0.3)]">
                       📜
                     </div>
                     <div>
-                      <span className="block text-[10px] font-mono tracking-[0.2em] text-[#F7E7C4] uppercase font-semibold">
+                      <span className="block text-[10.5px] font-mono tracking-[0.2em] text-[#F7E7C4] uppercase font-bold">
                         VERIFIED LINKEDIN CERTIFICATE
                       </span>
-                      <span className="block text-[9px] font-mono text-[#A8988B]">
+                      <span className="block text-[9.5px] font-mono text-[#A8988B] tracking-wide">
                         {cert.issuer}
                       </span>
                     </div>
                   </div>
-                  <span className="text-[10px] font-mono text-[#D4AF37] bg-black/50 px-2 py-1 rounded">
+                  <span className="text-[10px] font-mono text-[#D4AF37] bg-black/70 px-2.5 py-1 rounded-md border border-[#D4AF37]/30">
                     {cert.date}
                   </span>
                 </div>
@@ -286,10 +286,10 @@ export const CertificationsSection: React.FC = () => {
                   <div>
                     {/* Issuer */}
                     <span
-                      className="block text-[10px] font-mono tracking-[0.22em] uppercase text-[#A8988B] mb-1"
+                      className="block text-[10px] font-mono tracking-[0.22em] uppercase text-[#8C6D4F] mb-1.5"
                       style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
-                      ISSUED BY {cert.issuer}
+                      ISSUED BY {cert.issuer.toUpperCase()}
                     </span>
 
                     {/* Certificate Title */}
@@ -315,7 +315,7 @@ export const CertificationsSection: React.FC = () => {
                       {cert.skills.map((s) => (
                         <span
                           key={s}
-                          className="px-2.5 py-0.5 text-[9.5px] font-medium tracking-[0.14em] uppercase rounded-sm border border-[#8C6D4F]/30 bg-[#120F0C] text-[#E8D7C5] group-hover:border-[#D4AF37]/40 transition-colors"
+                          className="px-2.5 py-1 text-[9.5px] font-medium tracking-[0.14em] uppercase rounded-md border border-[#8C6D4F]/35 bg-[#120F0C] text-[#E8D7C5] group-hover:border-[#D4AF37]/50 transition-colors"
                           style={{ fontFamily: "'Montserrat', sans-serif" }}
                         >
                           {s}
@@ -327,10 +327,10 @@ export const CertificationsSection: React.FC = () => {
                     <div className="flex flex-col sm:flex-row gap-2.5">
                       <button
                         onClick={() => setSelectedCert(cert)}
-                        className="flex-1 inline-flex items-center justify-center space-x-2 py-3 border border-[#D4AF37]/60 bg-[#D4AF37]/10 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[10.5px] font-medium tracking-[0.18em] uppercase transition-all duration-300"
+                        className="flex-1 inline-flex items-center justify-center space-x-2 py-3.5 border border-[#D4AF37]/70 bg-[#D4AF37]/15 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[10.5px] font-medium tracking-[0.18em] uppercase transition-all duration-300 rounded-md shadow-[0_0_15px_rgba(212,175,55,0.2)]"
                         style={{ fontFamily: "'Montserrat', sans-serif" }}
                       >
-                        <span>VIEW DETAILS</span>
+                        <span>VIEW PREVIEW</span>
                         <span className="text-xs">🔍</span>
                       </button>
 
@@ -338,10 +338,10 @@ export const CertificationsSection: React.FC = () => {
                         href={cert.certificateUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 inline-flex items-center justify-center space-x-2 py-3 border border-[#8C6D4F]/50 bg-[#14100D] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#EAD8C7] hover:text-black text-[10.5px] font-medium tracking-[0.18em] uppercase transition-all duration-300"
+                        className="flex-1 inline-flex items-center justify-center space-x-2 py-3.5 border border-[#8C6D4F]/50 bg-[#14100D] hover:border-[#D4AF37] hover:bg-[#1A1510] text-[#EAD8C7] hover:text-[#F7E7C4] text-[10.5px] font-medium tracking-[0.18em] uppercase transition-all duration-300 rounded-md"
                         style={{ fontFamily: "'Montserrat', sans-serif" }}
                       >
-                        <span>VIEW LINKEDIN POST</span>
+                        <span>VERIFY ON LINKEDIN</span>
                         <span className="text-xs">📄</span>
                       </a>
                     </div>
@@ -360,33 +360,33 @@ export const CertificationsSection: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedCert(null)}
-              className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
+              className="fixed inset-0 z-50 bg-black/92 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6"
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0, y: 20 }}
                 animate={{ scale: 1, opacity: 1, y: 0 }}
                 exit={{ scale: 0.9, opacity: 0, y: 20 }}
                 onClick={(e) => e.stopPropagation()}
-                className="relative max-w-2xl w-full rounded-2xl border-2 border-[#D4AF37] bg-[#0E0C0A] p-8 sm:p-10 shadow-[0_25px_80px_rgba(212,175,55,0.25)] overflow-hidden"
+                className="relative max-w-2xl w-full rounded-3xl border-2 border-[#D4AF37] bg-[#0E0C0A] p-8 sm:p-10 shadow-[0_25px_90px_rgba(212,175,55,0.3)] overflow-hidden"
               >
-                {/* Gold Horizon Line */}
+                {/* Gold Top Flare */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#D4AF37] via-[#F7E7C4] to-[#D4AF37]" />
 
                 {/* Close Button */}
                 <button
                   onClick={() => setSelectedCert(null)}
-                  className="absolute top-4 right-4 text-[#A8988B] hover:text-white text-lg w-8 h-8 rounded-full border border-[#8C6D4F]/40 flex items-center justify-center transition-colors"
+                  className="absolute top-4 right-4 text-[#A8988B] hover:text-white text-lg w-9 h-9 rounded-full border border-[#8C6D4F]/40 bg-[#14100D] flex items-center justify-center transition-colors"
                 >
                   ✕
                 </button>
 
-                {/* Certificate Emblem Header */}
+                {/* Certificate Header */}
                 <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-[#D4AF37] bg-[#D4AF37]/10 text-2xl mb-3 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-[#D4AF37] bg-[#D4AF37]/15 text-2xl mb-3 shadow-[0_0_25px_rgba(212,175,55,0.35)]">
                     📜
                   </div>
                   <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-[#D4AF37]">
-                    OFFICIAL CERTIFICATE DOCUMENT
+                    OFFICIAL CERTIFICATE DOCUMENT PREVIEW
                   </span>
                   <h3
                     className="text-3xl sm:text-4xl text-white font-normal uppercase leading-tight mt-1"
@@ -399,8 +399,8 @@ export const CertificationsSection: React.FC = () => {
                   </span>
                 </div>
 
-                {/* Certificate Details Box */}
-                <div className="p-5 rounded-lg border border-[#8C6D4F]/40 bg-[#050403] mb-6 space-y-3">
+                {/* Certificate Specifications Box */}
+                <div className="p-5 rounded-xl border border-[#8C6D4F]/40 bg-[#050403] mb-6 space-y-3 shadow-inner">
                   <div className="flex items-center justify-between text-xs font-mono">
                     <span className="text-[#8C6D4F]">RECIPIENT:</span>
                     <span className="text-[#F7E7C4] font-semibold">SHITAL PATIL</span>
@@ -411,7 +411,7 @@ export const CertificationsSection: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between text-xs font-mono">
                     <span className="text-[#8C6D4F]">VERIFICATION STATUS:</span>
-                    <span className="text-[#34A853] font-semibold">VERIFIED & ACTIVE ✓</span>
+                    <span className="text-[#34A853] font-semibold">VERIFIED &amp; ACTIVE ✓</span>
                   </div>
                 </div>
 
@@ -431,7 +431,7 @@ export const CertificationsSection: React.FC = () => {
                     {selectedCert.skills.map((s) => (
                       <span
                         key={s}
-                        className="px-3 py-1 text-[10px] font-medium tracking-[0.14em] uppercase rounded-sm border border-[#D4AF37]/50 bg-[#D4AF37]/10 text-[#F7E7C4]"
+                        className="px-3 py-1 text-[10px] font-medium tracking-[0.14em] uppercase rounded-md border border-[#D4AF37]/50 bg-[#D4AF37]/10 text-[#F7E7C4]"
                         style={{ fontFamily: "'Montserrat', sans-serif" }}
                       >
                         {s}
@@ -446,16 +446,16 @@ export const CertificationsSection: React.FC = () => {
                     href={selectedCert.certificateUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center space-x-2 py-3.5 border border-[#D4AF37] bg-[#D4AF37] text-black text-xs font-medium tracking-[0.2em] uppercase transition-all hover:bg-[#F7E7C4]"
+                    className="flex-1 inline-flex items-center justify-center space-x-2 py-3.5 border border-[#D4AF37] bg-[#D4AF37] text-black text-xs font-medium tracking-[0.2em] uppercase transition-all hover:bg-[#F7E7C4] rounded-md shadow-[0_0_20px_rgba(212,175,55,0.4)]"
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
-                    <span>OPEN LINKEDIN POST</span>
+                    <span>OPEN LINKEDIN DOCUMENT</span>
                     <span className="text-xs">📄</span>
                   </a>
 
                   <button
                     onClick={() => setSelectedCert(null)}
-                    className="px-6 py-3.5 border border-[#8C6D4F]/40 bg-[#120F0C] text-[#A8988B] hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-colors"
+                    className="px-6 py-3.5 border border-[#8C6D4F]/40 bg-[#120F0C] text-[#A8988B] hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-colors rounded-md"
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
                     CLOSE PREVIEW
