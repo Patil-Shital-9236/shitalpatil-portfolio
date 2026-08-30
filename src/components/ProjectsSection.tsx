@@ -25,7 +25,7 @@ const allProjects: Project[] = [
     description:
       'A high-fidelity UI/UX design and interactive prototype for a frictionless medical queue management system, allowing patients to skip the waiting room and track live queue progress.',
     githubUrl: 'https://github.com/Patil-Shital-9236/queueless-uiux-design',
-    liveUrl: 'https://queue-flow-pro-46.lovable.app/',
+    liveUrl: 'https://www.figma.com/proto/NioH69BT4n9KyMAZ1kRaEN/Shital-Patil?node-id=1275-107&viewport=-608%2C1320%2C0.07&t=7iISMqqnmkU36ns6-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1149%3A534&page-id=153%3A2',
     tech: ['Figma', 'UI/UX Design', 'Wireframing', 'Prototyping'],
     metrics: [
       { label: 'TYPE', value: 'UI/UX Case Study' },
