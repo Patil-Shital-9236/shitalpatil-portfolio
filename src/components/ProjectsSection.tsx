@@ -7,7 +7,7 @@ interface Project {
   number: string;
   title: string;
   category: string;
-  filterGroup: 'ai-ml' | 'fullstack-backend' | 'web-mobile';
+  filterGroup: 'ai-ml' | 'fullstack-backend' | 'web-mobile' | 'ui-ux';
   description: string;
   githubUrl: string;
   liveUrl?: string;
@@ -21,7 +21,7 @@ const allProjects: Project[] = [
     number: '01',
     title: 'QueueLess - Smart Clinic Queue Management',
     category: 'UI/UX DESIGN',
-    filterGroup: 'web-mobile',
+    filterGroup: 'ui-ux',
     description:
       'A high-fidelity UI/UX design and interactive prototype for a frictionless medical queue management system, allowing patients to skip the waiting room and track live queue progress.',
     githubUrl: 'https://github.com/Patil-Shital-9236/queueless-uiux-design',
@@ -38,7 +38,7 @@ const allProjects: Project[] = [
     number: '02',
     title: 'Luxury Portfolio UI/UX System',
     category: 'UI/UX DESIGN',
-    filterGroup: 'web-mobile',
+    filterGroup: 'ui-ux',
     description:
       'A luxury dark-mode portfolio design architecture highlighting engineering competence and visual design proficiency. Employs a gold-accented palette to emphasize key technical achievements.',
     githubUrl: 'https://github.com/Patil-Shital-9236/shital-patil-portfolio-uiux',
@@ -55,7 +55,7 @@ const allProjects: Project[] = [
     number: '03',
     title: 'Burger Store - Smart Food Ordering',
     category: 'UI/UX DESIGN',
-    filterGroup: 'web-mobile',
+    filterGroup: 'ui-ux',
     description:
       'A modern gourmet burger store UI/UX experience and interactive prototype for mobile food ordering. Features seamless navigation, vibrant product showcases, and a streamlined checkout flow.',
     githubUrl: 'https://github.com/Patil-Shital-9236/burger-store-uiux-design',
@@ -327,7 +327,7 @@ const allProjects: Project[] = [
   }
 ];
 
-type FilterType = 'all' | 'ai-ml' | 'fullstack-backend' | 'web-mobile';
+type FilterType = 'all' | 'ui-ux' | 'ai-ml' | 'fullstack-backend' | 'web-mobile';
 
 export const ProjectsSection: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
@@ -573,6 +573,10 @@ export const ProjectsSection: React.FC = () => {
               <div className="flex flex-wrap items-center gap-2.5 mb-12 border-b border-[#8C6D4F]/25 pb-6">
                 {[
                   { id: 'all', label: `ALL PROJECTS (${allProjects.length})` },
+                  {
+                    id: 'ui-ux',
+                    label: `UI/UX DESIGN (${allProjects.filter((p) => p.filterGroup === 'ui-ux').length})`,
+                  },
                   {
                     id: 'ai-ml',
                     label: `AI & ML (${allProjects.filter((p) => p.filterGroup === 'ai-ml').length})`,
