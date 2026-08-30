@@ -47,10 +47,10 @@ const journey: RouteStop[] = [
     description: (
       <div className="space-y-4">
         <ul className="list-disc pl-4 space-y-2 opacity-80">
-          <li>Designed 130+ UI screens using Figma and React.js, using AI tools (Visily, Stitch, ChatGPT) for wireframes, UI ideas, prototyping, and design improvements.</li>
-          <li>Helped the team speed up UI development, reduce design iterations, and maintain consistency across screens.</li>
-          <li>Worked on 4+ backend modules across 10+ microservices using NestJS, TypeScript, MongoDB, REST APIs, and Kafka.</li>
-          <li>Improved service communication and API Gateway routing, helping the team integrate new services faster, reduce service dependencies, and make the system easier to maintain and scale.</li>
+          <li>Designed 130+ high-fidelity UI screens using Figma &amp; React.js, leveraging AI design tools (Visily, Stitch, ChatGPT) for rapid wireframing, UI ideation, interactive prototyping, and design enhancements.</li>
+          <li>Led end-to-end UI/UX product design for EMS (Employee Management System), crafting intuitive employee dashboards, attendance tracking, performance management, payroll interfaces, and role-based portal workflows.</li>
+          <li>Developed scalable Figma design systems, reusable UI component libraries, and design tokens, ensuring strict visual consistency and seamless design-to-development handoffs across all platforms.</li>
+          <li>Conducted user journey mapping, wireframing, and usability testing for EMS modules, accelerating frontend UI production, reducing revision cycles, and delivering responsive user-centered experiences.</li>
         </ul>
       </div>
     ),
