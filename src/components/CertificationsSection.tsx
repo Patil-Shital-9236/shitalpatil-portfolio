@@ -6,7 +6,7 @@ interface Certificate {
   title: string;
   issuer: string;
   tech: string;
-  category: 'ai-ml' | 'fullstack-backend' | 'cybersecurity';
+  category: 'ai-ml' | 'fullstack-backend' | 'ui-ux-design' | 'cybersecurity';
   description: string;
   skills: string[];
   certificateUrl: string;
@@ -26,6 +26,42 @@ const certificatesList: Certificate[] = [
     certificateUrl:
       'https://www.linkedin.com/feed/update/urn:li:activity:7452352062857699328?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7452352062857699328%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=UCYo6Bz%2FSRWySKesCm5vVw%3D%3D',
     thumbnail: '/certificates/generative-ai-literacy.svg',
+  },
+  {
+    id: 'ux-user-experience-design',
+    title: 'UX User Experience Design Certificate',
+    issuer: 'Cursa / E-Learning Platform',
+    tech: 'UX Design & Research',
+    category: 'ui-ux-design',
+    description:
+      'Certified in User Experience Design on Cursa platform (17h 24m workload), mastering user research, wireframing, information architecture, usability testing, and prototype evaluation.',
+    skills: ['UX Design', 'User Research', 'Wireframing', 'Information Architecture'],
+    certificateUrl: '/certificates/ux-user-experience-design.pdf',
+    thumbnail: '/certificates/ux-user-experience-design.svg',
+  },
+  {
+    id: 'user-interface-design',
+    title: 'User Interface Design Certificate',
+    issuer: 'Cursa / E-Learning Platform',
+    tech: 'UI & Component Design',
+    category: 'ui-ux-design',
+    description:
+      'Certified in User Interface Design on Cursa platform (12h 04m workload), specializing in visual hierarchy, design systems, color theory, typography, and responsive interface layouts.',
+    skills: ['UI Design', 'Design Systems', 'Visual Hierarchy', 'Typography'],
+    certificateUrl: '/certificates/user-interface-design.pdf',
+    thumbnail: '/certificates/user-interface-design.svg',
+  },
+  {
+    id: 'graphic-design-basics',
+    title: 'Graphic Design Basics Certificate',
+    issuer: 'Cursa / E-Learning Platform',
+    tech: 'Graphic & Visual Design',
+    category: 'ui-ux-design',
+    description:
+      'Certified in Graphic Design Fundamentals on Cursa platform, covering brand identity principles, vector graphics, layout balance, and digital media design.',
+    skills: ['Graphic Design', 'Brand Identity', 'Vector Graphics', 'Visual Composition'],
+    certificateUrl: '/certificates/graphic-design-basics.pdf',
+    thumbnail: '/certificates/graphic-design-basics.svg',
   },
   {
     id: 'sankey-arise',
@@ -120,7 +156,7 @@ const certificatesList: Certificate[] = [
   },
 ];
 
-type FilterType = 'all' | 'ai-ml' | 'fullstack-backend' | 'cybersecurity';
+type FilterType = 'all' | 'ai-ml' | 'fullstack-backend' | 'ui-ux-design' | 'cybersecurity';
 
 export const CertificationsSection: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
@@ -292,7 +328,7 @@ export const CertificationsSection: React.FC = () => {
             className="text-xs sm:text-sm font-light text-[#b5b5b5] max-w-md leading-relaxed"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            Explore all {certificatesList.length} verified certificates, internship awards, and Google Cloud credentials with interactive document previews and direct verification links.
+            Explore all {certificatesList.length} verified certificates, Cursa UI/UX awards, internship credentials, and Google Cloud certifications with interactive PDF document previews.
           </p>
         </motion.div>
 
@@ -300,6 +336,10 @@ export const CertificationsSection: React.FC = () => {
         <div className="flex flex-wrap items-center gap-2.5 mb-12 border-b border-white/10 pb-6">
           {[
             { id: 'all', label: `ALL CERTIFICATES (${certificatesList.length})` },
+            {
+              id: 'ui-ux-design',
+              label: `UI/UX & DESIGN (${certificatesList.filter((c) => c.category === 'ui-ux-design').length})`,
+            },
             {
               id: 'ai-ml',
               label: `AI & MACHINE LEARNING (${certificatesList.filter((c) => c.category === 'ai-ml').length})`,
@@ -370,8 +410,8 @@ export const CertificationsSection: React.FC = () => {
                     {cert.title}
                   </h3>
 
-                  <p className="line-clamp-2" title="A professional certification showcasing expertise and proficiency in this domain.">
-                    A professional certification showcasing expertise and proficiency in this domain.
+                  <p className="line-clamp-2" title={cert.description}>
+                    {cert.description}
                   </p>
 
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5 gap-3">
@@ -430,9 +470,9 @@ export const CertificationsSection: React.FC = () => {
 
                 {/* Modal Preview Body - Exact Atharv Code */}
                 <div className="p-4 flex justify-center bg-black/20 w-full h-[65vh]">
-                  {selectedCert.thumbnail.endsWith('.pdf') ? (
+                  {selectedCert.certificateUrl.endsWith('.pdf') ? (
                     <iframe
-                      src={selectedCert.thumbnail}
+                      src={selectedCert.certificateUrl}
                       className="w-full h-full rounded-lg shadow-lg border border-white/5"
                       title={selectedCert.title}
                     />
@@ -458,7 +498,7 @@ export const CertificationsSection: React.FC = () => {
                       rel="noopener noreferrer"
                       className="px-5 py-2 rounded-full border border-[#E5E4E2] bg-[#E5E4E2] text-black font-semibold text-xs hover:bg-white transition-all shadow-[0_0_15px_rgba(229,228,226,0.4)]"
                     >
-                      Verify on LinkedIn ↗
+                      {selectedCert.certificateUrl.endsWith('.pdf') ? 'Open PDF Document 📄' : 'Verify Credentials ↗'}
                     </a>
                     <button
                       onClick={() => setSelectedCert(null)}
