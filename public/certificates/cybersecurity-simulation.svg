@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0e0c"/>
+      <stop offset="50%" stop-color="#181511"/>
+      <stop offset="100%" stop-color="#090806"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C99E5D"/>
+      <stop offset="50%" stop-color="#F7E7C4"/>
+      <stop offset="100%" stop-color="#9E763B"/>
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#EA4335" stroke-width="0.3" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="560" fill="url(#bgGrad)"/>
+  <rect width="800" height="560" fill="url(#grid)"/>
+
+  <rect x="25" y="25" width="750" height="510" rx="12" fill="none" stroke="url(#goldGrad)" stroke-width="3"/>
+  <rect x="35" y="35" width="730" height="490" rx="8" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+
+  <text x="400" y="90" text-anchor="middle" fill="#EA4335" font-family="'Courier New', monospace" font-size="14" letter-spacing="6">FORAGE VIRTUAL EXPERIENCE PROGRAM</text>
+  <text x="400" y="130" text-anchor="middle" fill="url(#goldGrad)" font-family="Georgia, serif" font-size="28" font-weight="bold" letter-spacing="3">JOB SIMULATION CERTIFICATE</text>
+  <line x1="250" y1="145" x2="550" y2="145" stroke="url(#goldGrad)" stroke-width="1.5"/>
+
+  <text x="400" y="195" text-anchor="middle" fill="#A8988B" font-family="sans-serif" font-size="12" letter-spacing="4">THIS CERTIFIES THAT</text>
+  <text x="400" y="250" text-anchor="middle" fill="#FFFFFF" font-family="'Helvetica Neue', sans-serif" font-size="42" font-weight="bold" letter-spacing="4">SHITAL PATIL</text>
+
+  <text x="400" y="300" text-anchor="middle" fill="#D4AF37" font-family="sans-serif" font-size="14" letter-spacing="2">HAS SUCCESSFULLY COMPLETED THE SIMULATION FOR</text>
+  <text x="400" y="340" text-anchor="middle" fill="#F7E7C4" font-family="Georgia, serif" font-size="24" font-weight="bold">Cybersecurity Job Simulation</text>
+  <text x="400" y="370" text-anchor="middle" fill="#8C6D4F" font-family="sans-serif" font-size="13">ISSUED BY FORAGE / CYBERSECURITY • CREDENTIAL ID: FORAGE-CYBER-8812</text>
+
+  <g transform="translate(400, 440)">
+    <circle r="36" fill="#181511" stroke="url(#goldGrad)" stroke-width="2"/>
+    <circle r="30" fill="none" stroke="#EA4335" stroke-width="1" stroke-dasharray="3,3"/>
+    <text y="4" text-anchor="middle" fill="url(#goldGrad)" font-family="sans-serif" font-size="20">🛡️</text>
+    <text y="22" text-anchor="middle" fill="#34A853" font-family="sans-serif" font-size="7" font-weight="bold" letter-spacing="1">VERIFIED ✓</text>
+  </g>
+
+  <text x="80" y="470" fill="#8C6D4F" font-family="monospace" font-size="10">ISSUER: FORAGE CYBERSECURITY</text>
+  <text x="80" y="490" fill="#8C6D4F" font-family="monospace" font-size="10">TRACK: NETWORK THREAT DEFENSE</text>
+  <text x="720" y="470" text-anchor="end" fill="#8C6D4F" font-family="monospace" font-size="10">DATE: VERIFIED 2026</text>
+  <text x="720" y="490" text-anchor="end" fill="#8C6D4F" font-family="monospace" font-size="10">DOMAIN: CYBERSECURITY &amp; CLOUD</text>
+</svg>
