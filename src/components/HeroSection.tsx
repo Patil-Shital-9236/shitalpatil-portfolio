@@ -225,7 +225,7 @@ export const HeroSection: React.FC = () => {
             >
               {/* Explore My Work CTA */}
               <motion.a
-                href="#work"
+                href="#projects"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 whileHover={{ scale: 1.02 }}
