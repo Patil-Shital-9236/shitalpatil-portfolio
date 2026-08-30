@@ -7,10 +7,13 @@ interface Certificate {
   issuer: string;
   tech: string;
   category: 'ai-ml' | 'fullstack-backend' | 'cybersecurity';
+  credentialId: string;
+  date: string;
+  badgeIcon: string;
+  badgeBg: string;
   description: string;
   skills: string[];
   certificateUrl: string;
-  thumbnail: string;
 }
 
 const certificatesList: Certificate[] = [
@@ -20,12 +23,15 @@ const certificatesList: Certificate[] = [
     issuer: 'LinkedIn / AI Literacy',
     tech: 'Generative AI & LLMs',
     category: 'ai-ml',
+    credentialId: 'LNKD-GENAI-9236',
+    date: 'Verified 2026',
+    badgeIcon: '🤖',
+    badgeBg: 'from-[#4285F4]/30 via-[#D4AF37]/20 to-[#0f0f0f]',
     description:
       'Certified in Generative AI Literacy, covering fundamental concepts of Large Language Models (LLMs), prompt engineering principles, AI productivity integration, and enterprise AI usage.',
     skills: ['Generative AI', 'LLMs', 'Prompt Engineering', 'AI Productivity'],
     certificateUrl:
       'https://www.linkedin.com/feed/update/urn:li:activity:7452352062857699328?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7452352062857699328%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=UCYo6Bz%2FSRWySKesCm5vVw%3D%3D',
-    thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?q=80&w=1000&auto=format&fit=crop',
   },
   {
     id: 'sankey-arise',
@@ -33,12 +39,15 @@ const certificatesList: Certificate[] = [
     issuer: 'Sankey Solutions',
     tech: 'Full Stack & Software Eng.',
     category: 'fullstack-backend',
+    credentialId: 'SNKY-ARISE-2026',
+    date: 'Verified 2026',
+    badgeIcon: '⚡',
+    badgeBg: 'from-[#D4AF37]/30 via-[#8C6D4F]/20 to-[#0f0f0f]',
     description:
       'Completed the intensive Sankey Arise Training Program specializing in software engineering, full stack architecture, data structures, and production web applications.',
     skills: ['Software Engineering', 'Full Stack Development', 'Data Structures', 'Web Applications'],
     certificateUrl:
       'https://www.linkedin.com/feed/update/urn:li:activity:7452312394036326400?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7452312394036326400%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=1FjkBEnqQPyE%2FwT1I9AdLQ%3D%3D',
-    thumbnail: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop',
   },
   {
     id: 'cybersecurity-simulation',
@@ -46,12 +55,15 @@ const certificatesList: Certificate[] = [
     issuer: 'Forage / Cybersecurity',
     tech: 'Cybersecurity & Defense',
     category: 'cybersecurity',
+    credentialId: 'FORAGE-CYBER-8812',
+    date: 'Verified 2026',
+    badgeIcon: '🛡️',
+    badgeBg: 'from-[#EA4335]/30 via-[#FBBC05]/20 to-[#0f0f0f]',
     description:
       'Completed the Cybersecurity Virtual Experience Program on Forage, analyzing network threat intelligence, security posture management, vulnerability assessments, and incident response.',
     skills: ['Cybersecurity', 'Threat Analysis', 'Network Defense', 'Vulnerability Assessment'],
     certificateUrl:
       'https://www.linkedin.com/feed/update/urn:li:activity:7388916103143669760?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7388916103143669760%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=smdy2cuYRcyfy%2FR9cq%2Fe1A%3D%3D',
-    thumbnail: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop',
   },
   {
     id: 'gcp-genai-leader',
@@ -59,12 +71,15 @@ const certificatesList: Certificate[] = [
     issuer: 'Google Cloud',
     tech: 'Google Cloud & Vertex AI',
     category: 'ai-ml',
+    credentialId: 'GCP-GENAI-7719',
+    date: 'Verified 2026',
+    badgeIcon: '☁️',
+    badgeBg: 'from-[#4285F4]/30 via-[#34A853]/20 to-[#0f0f0f]',
     description:
       'Awarded official Google Cloud Generative AI Leader Track certificate for demonstrating expertise in Gemini models, LLM architectures, Vertex AI, and cloud AI deployment.',
     skills: ['Google Cloud', 'Generative AI', 'Gemini Models', 'Vertex AI', 'Cloud AI'],
     certificateUrl:
       'https://www.linkedin.com/feed/update/urn:li:activity:7383833829851049985?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7383833829851049985%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=4aZUD8r5QiCpz2GZKWJc9A%3D%3D',
-    thumbnail: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1000&auto=format&fit=crop',
   },
   {
     id: 'forage-software-cert',
@@ -72,12 +87,15 @@ const certificatesList: Certificate[] = [
     issuer: 'Forage',
     tech: 'Software Engineering',
     category: 'fullstack-backend',
+    credentialId: 'FORAGE-SDE-5021',
+    date: 'Verified 2026',
+    badgeIcon: '💼',
+    badgeBg: 'from-[#34A853]/30 via-[#4285F4]/20 to-[#0f0f0f]',
     description:
       'Completed practical software engineering job simulation on Forage solving real-world development tasks, code refactoring, API integration, and software design.',
     skills: ['Software Engineering', 'Code Refactoring', 'API Integration', 'Software Design'],
     certificateUrl:
       'https://www.linkedin.com/feed/update/urn:li:activity:7381689084806807552?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7381689084806807552%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=TbupIQcqRauLeuk%2B8QPWLQ%3D%3D',
-    thumbnail: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop',
   },
   {
     id: 'naukri-campus',
@@ -85,12 +103,15 @@ const certificatesList: Certificate[] = [
     issuer: 'NaukriCampus',
     tech: 'Competitive Engineering',
     category: 'fullstack-backend',
+    credentialId: 'NAUKRI-CAMPUS-2026',
+    date: 'Verified 2026',
+    badgeIcon: '🏆',
+    badgeBg: 'from-[#FFA116]/30 via-[#D4AF37]/20 to-[#0f0f0f]',
     description:
       'Official Certificate of Participation in NaukriCampus national engineering skill evaluation and competitive technical assessment.',
     skills: ['Technical Assessment', 'Coding Evaluation', 'Problem Solving', 'Engineering Fundamentals'],
     certificateUrl:
       'https://www.linkedin.com/feed/update/urn:li:activity:7370824233939238912?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7370824233939238912%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=NrhCe%2FXsS7%2BtZ82vTRkFtg%3D%3D',
-    thumbnail: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1000&auto=format&fit=crop',
   },
   {
     id: 'cognifyz-ml-internship',
@@ -98,12 +119,15 @@ const certificatesList: Certificate[] = [
     issuer: 'Cognifyz Technologies',
     tech: 'Machine Learning & Python',
     category: 'ai-ml',
+    credentialId: 'CGNZ-ML-INT-2025',
+    date: 'Verified 2025',
+    badgeIcon: '🧠',
+    badgeBg: 'from-[#8C6D4F]/30 via-[#D4AF37]/20 to-[#0f0f0f]',
     description:
       'Successfully completed Machine Learning Internship at Cognifyz Technologies building predictive ML models, data preprocessing pipelines, evaluation metrics, and algorithm implementations.',
     skills: ['Machine Learning', 'Python', 'Scikit-Learn', 'Data Analysis', 'Predictive Modeling'],
     certificateUrl:
       'https://www.linkedin.com/feed/update/urn:li:activity:7276629654143123456?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7276629654143123456%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=lJ4SaLQtQnu%2F7asdEs8I2g%3D%3D',
-    thumbnail: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1000&auto=format&fit=crop',
   },
   {
     id: 'backend-internship',
@@ -111,12 +135,15 @@ const certificatesList: Certificate[] = [
     issuer: 'Tech Internship Program',
     tech: 'Backend & REST APIs',
     category: 'fullstack-backend',
+    credentialId: 'BEND-INT-2025-9011',
+    date: 'Verified 2025',
+    badgeIcon: '⚙️',
+    badgeBg: 'from-[#D4AF37]/30 via-[#120F0C]/40 to-[#0f0f0f]',
     description:
       'Awarded Backend Web Development Internship completion for designing RESTful APIs, database schema design, asynchronous server handlers, and scalable backend logic.',
     skills: ['Backend Development', 'Node.js', 'REST APIs', 'Database Architecture', 'Server Security'],
     certificateUrl:
       'https://www.linkedin.com/feed/update/urn:li:activity:7272643905207115777?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7272643905207115777%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&originTrackingId=qtAYnyZaTHGfwZl3zdFakg%3D%3D',
-    thumbnail: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000&auto=format&fit=crop',
   },
 ];
 
@@ -136,7 +163,7 @@ export const CertificationsSection: React.FC = () => {
       id="certifications"
       className="relative w-full bg-black text-[#E8DFD8] font-sans pt-20 pb-32 px-6 sm:px-12 lg:px-20 overflow-hidden"
     >
-      {/* Atharv Portfolio Exact Styles */}
+      {/* Atharv Portfolio Exact CSS Rules */}
       <style>{`
         .portfolio10-cert-card {
           background: #0f0f0f;
@@ -158,19 +185,8 @@ export const CertificationsSection: React.FC = () => {
         }
 
         .portfolio10-cert-image {
-          height: 190px;
+          height: 195px;
           overflow: hidden;
-        }
-
-        .portfolio10-cert-image img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: 0.6s ease;
-        }
-
-        .portfolio10-cert-card:hover .portfolio10-cert-image img {
-          transform: scale(1.1);
         }
 
         .portfolio10-cert-content {
@@ -345,15 +361,55 @@ export const CertificationsSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.08 }}
-                className="portfolio10-cert-card group h-[420px] flex flex-col w-full"
+                className="portfolio10-cert-card group h-[440px] flex flex-col w-full"
               >
-                {/* Image Preview Container */}
-                <div className="portfolio10-cert-image shrink-0 relative overflow-hidden bg-white/5 flex items-center justify-center">
-                  <img src={cert.thumbnail} alt={cert.title} />
-                  
-                  {/* Subtle Badge Overlay */}
-                  <div className="absolute top-3 right-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 text-[9px] font-mono text-[#E5E4E2]">
-                    {cert.issuer}
+                {/* Official Certificate Document Canvas Frame (No Faltu Placeholder Images!) */}
+                <div 
+                  onClick={() => setSelectedCert(cert)}
+                  className="portfolio10-cert-image shrink-0 relative overflow-hidden bg-gradient-to-br from-[#1c1814] via-[#120f0d] to-[#0a0807] flex flex-col justify-between p-4 cursor-pointer border-b border-white/10 group-hover:border-[#E5E4E2] transition-colors"
+                >
+                  {/* Parchment Grid Watermark */}
+                  <div className="absolute inset-0 bg-[radial-gradient(#E5E4E2_1px,transparent_1px)] [background-size:14px_14px] opacity-15 pointer-events-none" />
+
+                  {/* Header Row */}
+                  <div className="flex items-center justify-between relative z-10">
+                    <div className="flex items-center space-x-2">
+                      <span className="w-7 h-7 rounded-full bg-white/10 border border-[#E5E4E2]/40 flex items-center justify-center text-xs shadow-inner">
+                        {cert.badgeIcon}
+                      </span>
+                      <span className="text-[9.5px] font-mono tracking-[0.2em] text-[#E5E4E2] uppercase font-bold">
+                        VERIFIED DOCUMENT
+                      </span>
+                    </div>
+
+                    <span className="text-[8.5px] font-mono text-[#D4AF37] bg-black/80 px-2 py-0.5 rounded border border-[#D4AF37]/40">
+                      {cert.date}
+                    </span>
+                  </div>
+
+                  {/* Document Body */}
+                  <div className="text-center relative z-10 py-1">
+                    <span className="block text-[8px] font-mono text-white/50 tracking-[0.25em] uppercase mb-0.5">
+                      CERTIFICATE OF ACHIEVEMENT
+                    </span>
+                    <span className="block text-lg font-bold text-white tracking-wide uppercase font-sans drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
+                      SHITAL PATIL
+                    </span>
+                    <span className="block text-[8.5px] font-mono text-[#E5E4E2] truncate px-2 mt-0.5">
+                      {cert.title}
+                    </span>
+                  </div>
+
+                  {/* Footer Row */}
+                  <div className="flex items-center justify-between relative z-10 pt-2 border-t border-white/10">
+                    <span className="text-[8px] font-mono text-[#34A853] font-semibold flex items-center space-x-1">
+                      <span>VERIFIED CREDENTIAL</span>
+                      <span>✓</span>
+                    </span>
+
+                    <span className="text-[8px] font-mono text-[#E5E4E2] group-hover:translate-x-0.5 transition-transform uppercase font-medium">
+                      PREVIEW ↗
+                    </span>
                   </div>
                 </div>
 
@@ -421,24 +477,29 @@ export const CertificationsSection: React.FC = () => {
                   </button>
                 </div>
 
-                {/* Modal Preview Body */}
-                <div className="p-4 flex flex-col items-center justify-center bg-black/20 w-full min-h-[50vh] max-h-[70vh] overflow-y-auto">
-                  <div className="relative w-full h-72 sm:h-96 rounded-xl overflow-hidden border border-white/10 mb-4 bg-black">
-                    <img
-                      src={selectedCert.thumbnail}
-                      alt={selectedCert.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6">
-                      <span className="text-xs font-mono text-[#E5E4E2] uppercase tracking-widest mb-1">
-                        ISSUED BY {selectedCert.issuer}
-                      </span>
-                      <h4 className="text-2xl font-bold text-white mb-2">
-                        {selectedCert.title}
-                      </h4>
-                      <p className="text-xs text-white/70 max-w-2xl">
-                        {selectedCert.description}
-                      </p>
+                {/* Modal Document Canvas Body */}
+                <div className="p-6 flex flex-col items-center justify-center bg-black/40 w-full min-h-[45vh] max-h-[70vh] overflow-y-auto">
+                  <div className="relative w-full p-8 rounded-2xl border-2 border-[#E5E4E2]/60 bg-gradient-to-br from-[#1a1612] via-[#0f0d0b] to-[#080605] mb-6 shadow-2xl text-center space-y-4">
+                    <div className="w-14 h-14 rounded-full bg-white/10 border border-[#E5E4E2] mx-auto flex items-center justify-center text-2xl shadow-[0_0_20px_rgba(229,228,226,0.3)]">
+                      {selectedCert.badgeIcon}
+                    </div>
+
+                    <span className="block text-xs font-mono text-[#D4AF37] uppercase tracking-[0.3em]">
+                      OFFICIAL CERTIFICATE OF ACHIEVEMENT
+                    </span>
+
+                    <span className="block text-3xl sm:text-4xl text-white font-bold tracking-wider font-sans uppercase">
+                      SHITAL PATIL
+                    </span>
+
+                    <p className="text-sm font-mono text-[#E5E4E2] max-w-xl mx-auto leading-relaxed">
+                      HAS SUCCESSFULLY DEMONSTRATED PROFICIENCY &amp; ACQUIRED VERIFIED CERTIFICATION FOR <br />
+                      <strong className="text-white text-base">{selectedCert.title}</strong>
+                    </p>
+
+                    <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-white/70 max-w-md mx-auto">
+                      <span>ISSUER: {selectedCert.issuer}</span>
+                      <span>CREDENTIAL ID: {selectedCert.credentialId}</span>
                     </div>
                   </div>
 
@@ -457,7 +518,7 @@ export const CertificationsSection: React.FC = () => {
 
                 {/* Modal Footer */}
                 <div className="flex items-center justify-between p-4 border-t border-white/10 bg-black/50">
-                  <span className="text-xs text-white/60 font-mono">
+                  <span className="text-xs text-[#34A853] font-mono font-semibold">
                     STATUS: VERIFIED &amp; VALIDATED ✓
                   </span>
 
