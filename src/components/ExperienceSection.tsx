@@ -42,7 +42,7 @@ const journey: RouteStop[] = [
   {
     id: '04',
     year: 'JUNE 2026 - PRESENT',
-    title: 'UIUX + BACKEND DEVELOPER INTERN',
+    title: 'UI/UX DESIGNER INTERN',
     organization: 'NEXAPRIME PVT LTD',
     description: (
       <div className="space-y-4">
