@@ -486,11 +486,7 @@ export const CertificationsSection: React.FC = () => {
                 </div>
 
                 {/* Modal Footer */}
-                <div className="flex items-center justify-between p-4 border-t border-white/10 bg-black/50">
-                  <span className="text-xs text-[#34A853] font-mono font-semibold">
-                    STATUS: VERIFIED &amp; VALIDATED ✓
-                  </span>
-
+                <div className="flex items-center justify-end p-4 border-t border-white/10 bg-black/50">
                   <div className="flex items-center space-x-3">
                     <a
                       href={selectedCert.certificateUrl}
