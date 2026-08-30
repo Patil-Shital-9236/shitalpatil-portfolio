@@ -4,12 +4,20 @@ import type { Variants } from 'framer-motion';
 
 const bentoCategories = [
   {
+    title: 'UI/UX & PRODUCT DESIGN',
+    badge: 'DESIGN SYSTEM',
+    items: ['Figma', 'UI/UX Design', 'Wireframing', 'Prototyping', 'Design Systems', 'User Research', 'Visily', 'Stitch AI', 'Responsive UI'],
+    description: 'Crafting intuitive user experiences, high-fidelity Figma prototypes, design systems, wireframes, and responsive component libraries.',
+    stat: 'PRODUCT DESIGN',
+    colSpan: 'lg:col-span-6',
+  },
+  {
     title: 'TECHNICAL SKILLS',
     badge: 'CORE PILLAR',
     items: ['JavaScript', 'TypeScript', 'Python', 'SQL', 'React.js', 'Node.js', 'NestJS', 'Express.js', 'REST APIs', 'Microservices', 'HTML', 'CSS', 'Tailwind CSS', 'MongoDB', 'MySQL', 'PostgreSQL', 'Firebase'],
     description: 'Specialized in building scalable full-stack applications, robust backend services, REST APIs, and modern frontend interfaces.',
     stat: 'FULL STACK',
-    colSpan: 'lg:col-span-7',
+    colSpan: 'lg:col-span-6',
   },
   {
     title: 'TOOLS & INFRASTRUCTURE',
@@ -25,7 +33,7 @@ const bentoCategories = [
     items: ['DSA', 'OOP', 'DBMS', 'Operating Systems', 'Computer Networks', 'System Design'],
     description: 'Maintaining strong computer science fundamentals, understanding operating systems, networks, and building optimized algorithms.',
     stat: 'CORE CS',
-    colSpan: 'lg:col-span-12',
+    colSpan: 'lg:col-span-7',
   },
 ];
 
