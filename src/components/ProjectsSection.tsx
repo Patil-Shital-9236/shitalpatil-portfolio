@@ -530,7 +530,7 @@ export const ProjectsSection: React.FC = () => {
               SEE ALL OPTION // EXPLORE FULL REPOSITORY GRID
             </span>
             <h4 className="text-xl sm:text-2xl text-white font-normal uppercase tracking-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-              ALL 19 UI/UX DESIGN, AI &amp; ML, BACKEND &amp; APPS REPOSITORIES AVAILABLE IN GRID VIEW
+              ALL 19 AI &amp; ML, BACKEND &amp; APPS REPOSITORIES AVAILABLE IN GRID VIEW
             </h4>
           </div>
           <button
