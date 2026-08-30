@@ -202,7 +202,7 @@ export const HeroSection: React.FC = () => {
                 className="text-[10px] sm:text-[11px] md:text-xs font-normal tracking-[0.28em] uppercase text-[#C4B29E]"
                 style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
-                BACKEND DEVELOPER <span className="text-[#8C6D4F] mx-1">•</span> UI/UX DESIGNER <span className="text-[#8C6D4F] mx-1">•</span> FULL STACK
+                UI/UX DESIGNER <span className="text-[#8C6D4F] mx-1">•</span> BACKEND DEVELOPER <span className="text-[#8C6D4F] mx-1">•</span> FULL STACK
               </p>
             </motion.div>
 
@@ -213,9 +213,9 @@ export const HeroSection: React.FC = () => {
               style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               <p>
-                Backend developer and UI/UX designer building scalable systems
+                UI/UX designer and backend developer building intuitive digital experiences
                 <br />
-                and intuitive digital experiences.
+                and scalable systems.
               </p>
             </motion.div>
 
