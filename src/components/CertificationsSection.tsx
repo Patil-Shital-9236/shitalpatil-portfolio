@@ -64,6 +64,18 @@ const certificatesList: Certificate[] = [
     thumbnail: '/certificates/graphic-design-basics.svg',
   },
   {
+    id: 'graphic-design-beginners',
+    title: 'Graphic Design for Beginners Certificate',
+    issuer: 'Cursa / E-Learning Platform',
+    tech: 'Graphic Design & Layout',
+    category: 'ui-ux-design',
+    description:
+      'Certified in Graphic Design for Beginners on Cursa platform (11h 12m workload), mastering graphic composition, digital artwork, typography, and color harmony principles.',
+    skills: ['Graphic Design', 'Visual Composition', 'Digital Art', 'Color Harmony'],
+    certificateUrl: '/certificates/graphic-design-for-beginners.pdf',
+    thumbnail: '/certificates/graphic-design-for-beginners.svg',
+  },
+  {
     id: 'sankey-arise',
     title: 'Sankey Arise Program Certificate',
     issuer: 'Sankey Solutions',
